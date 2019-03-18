@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>
+			Juicy
+		</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="meniu_plata.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	</head>
+    
+	<body>
+
+		<div id="main_block">
+            
+			<header>
+                
+				<p id="cauta_produs"> <a href="index.html"> JUICY </a></p>
+                
+				<input type="text" placeholder="Cauta orice doresti" id="bara_cautare" class="bara_cautare_plata">
+                
+				<button class="fa fa-search" style="font-size:24px;color:orangered" id="buton_cauta"> </button>
+                
+                <a href="creare_conectare.html"> <button class="far fa-user" style="font-size:24px;color:orangered" id="buton_cont"></button>
+                </a>
+
+
+                <a href="cos.html"> 
+                <button class='fas fa-shopping-cart' style='color:orangered;font-size: 30px' id="buton_cos"> </button>
+                </a>
+
+                <a href="favorite.html">
+                  <button class='fas fa-heart' style='font-size:30px;color:orangered' id="buton_favorite"></button>
+                </a>
+				
+			</header>
+
+			
+	
+
+            <main id="main_body" ">
+              
+
+ <div class="row" class="cosasul">
+  <div class="col-75" id="billing">
+    <div class="container" id="bill">
+        <div class="row">
+          <div class="col-50" >
+          
+            <label for="name" style="color:black"><i class="fa fa-user"></i> Nume complet</label>
+            <input type="text" id="name" class="row1" placeholder="ex: Popescu Vasile">
+
+            <label for="email" style="color:black"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" class="row1" placeholder="ex: vasile.popescu@yahoo.com">
+
+            <label for="adresa" style="color:black"><i class="fa fa-address-card"></i> Adresa</label>
+            <input type="text" id="adr" class="row1" placeholder="ex: Strada Primaverii, nr.7, bloc T2, scara A1, apartament 35">
+
+            <label for="oras" style="color:black"><i class="fa fa-institution"></i> Oras</label>
+            <input type="text" id="city" class="row1" placeholder="ex: Constanta">
+
+
+            
+          </div>
+
+          <div class="col-50">
+            <h3>Plata</h3>
+            <label for="name" style="color:black">Modalitati acceptate</label>
+            <div class="icon-container">
+              <i class='fab fa-cc-mastercard' style='font-size:50px;color:black'></i>
+              
+              <i class='fab fa-cc-visa' style='font-size:50px;color:navy'></i>
+              
+            </div>
+
+            <label for="cname" style="color:black">Titular card (numele scris pe partea din fata a cardului)</label>
+            <input type="text" id="cname" class="row1" placeholder="ex: POPESCU VASILE">
+
+            <label for="ccnum" style="color:black">Numar card (numarul de 16 cifre scris pe partea din fata a cardului)</label>
+            <input type="text" id="ccnum" placeholder="ex: 1111-2222-3333-4444" class="row1" >
+
+
+            
+            </div>
+          </div>
+
+        </div>
+
+        
+        <a href="index.html"><input type="submit" value="Plaseaza comanda" class="btn"></a>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+			      </main>
+			
+            
+			
+		</div>
+	</body>
+</html>
