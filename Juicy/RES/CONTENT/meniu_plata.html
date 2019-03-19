@@ -1,1 +1,142 @@
-init_text
+<html>
+	<head>
+		<title>
+			Juicy
+		</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="
+        Juicy-Project/Juicy/RES/STYLE/meniu_plata.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	</head>
+    
+	<body>
+
+		<div id="main_block">
+            
+			<header>
+                
+				<p id="cauta_produs"> <a href="index.html"> JUICY </a></p>
+                
+                
+        <input type="text" placeholder="Cauta orice doresti" id="bara_cautare">
+        <button class="fa fa-search" style="font-size:24px;color:orangered" id="buton_cauta"> </button>
+      
+                
+                 <button class="far fa-user" style="font-size:24px;color:orangered" id="buton_cont" onclick ="window.location.href = 'creare_conectare.html';"></button>
+                
+
+
+                 
+                <button class='fas fa-shopping-cart' style='color:orangered;font-size: 30px' id="buton_cos" onclick ="window.location.href = 'cos.html';"> </button>
+                
+
+                
+                  <button class='fas fa-heart' style='font-size:30px;color:orangered' id="buton_favorite" onclick ="window.location.href = 'favorite.html';"></button>
+				
+			</header>
+
+            <main class = "main_body_in_meniu_plata">
+
+              
+
+ <div class="row" >
+  <div class="col-75" >
+    <div class="container" >
+        <div class="row">
+          <div class="col-50" >
+          
+            <label for="name" style="color:black"><i class="fa fa-user"></i> Nume complet</label>
+            <input type="text" id="name" class="row1" placeholder="ex: Popescu Vasile">
+
+            <label for="email" style="color:black"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" class="row1" placeholder="ex: vasile.popescu@yahoo.com">
+
+            <label for="adresa" style="color:black"><i class="fa fa-address-card"></i> Adresa</label>
+            <input type="text" id="adr" class="row1" placeholder="ex: Strada Primaverii, nr.7, bloc T2, scara A1, apartament 35">
+
+            <label for="oras" style="color:black"><i class="fa fa-institution"></i> Oras</label>
+            <input type="text" id="city" class="row1" placeholder="ex: Constanta">
+
+
+            
+          </div>
+
+          <div class="col-50">
+            <h3 style="color:black">Plata</h3>
+            <label for="name" style="color:black">Modalitati acceptate</label>
+            <div class="icon-container">
+              <i class='fab fa-cc-mastercard' style='font-size:50px;color:black'></i>
+              
+              <i class='fab fa-cc-visa' style='font-size:50px;color:navy'></i>
+              
+            </div>
+
+            <label for="cname" style="color:black">Titular card (numele scris pe partea din fata a cardului)</label>
+            <input type="text" id="cname" class="row1" placeholder="ex: POPESCU VASILE">
+
+            <label for="ccnum" style="color:black">Numar card (numarul de 16 cifre scris pe partea din fata a cardului)</label>
+            <input type="text" id="ccnum" placeholder="ex: 1111-2222-3333-4444" class="row1" >
+
+
+            
+            </div>
+          </div>
+
+        </div>
+
+        
+        <a href="index.html"><input type="submit" value="Plaseaza comanda" class="btn"></a>
+
+
+      
+    </div>
+  </div>
+
+</div>
+
+
+          <footer>
+               
+        <div class="box-set">
+            <figure class="box">
+
+            <u> <strong>Despre noi</strong></u><hr>
+              <i class='fab fa-github-square' style='font-size:24px;color:#8c8c8c'></i>
+              <a href="https://github.com/RaduMugurBogdan/Juicy-Project" style="color: orangered"> 
+                &#09;Proiectul nostru pe Github
+                  </a><br>
+
+            <i class='fab fa-facebook-square' style='font-size:24px;color:#1a1aff'></i> <a href="https://www.facebook.com/adrian.gemeniuc.8" style="color: orangered">&#09; Adrian Gemeniuc</a>   <br>
+
+            <i class='fab fa-facebook-square' style='font-size:24px;color:#1a1aff'></i>  <a href="https://www.facebook.com/adelin.vasiliu" style="color: orangered">&#09;Adelin Vasiliu</a>    <br>
+
+            <i class='fab fa-facebook-square' style='font-size:24px;color:#1a1aff'></i><a href="https://ro-ro.facebook.com/georgescu.florin.33" style="color: orangered">&#09;Florin Georgescu</a><br>
+
+            <i class='fab fa-facebook-square' style='font-size:24px;color:#1a1aff'></i><a href="https://www.facebook.com/bogdan.radu.7106" style="color: orangered">&#09;Bogdan Radu</a>
+
+            </figure>
+            <figure class="box">
+
+            <u> <strong>Avantajele JUICY</strong></u><hr>
+            <ul>
+              <p><li class='fas fa-dollar-sign' style='font-size:18px'>&#09;&#09;&#09;Bauturi la cele mai mici preturi</li></p>
+              <p><li class='fas fa-truck' style='font-size:17px'>&#09;Livrare la domiciliu in toata tara</li></p>
+              <p><li class='fas fa-business-time' style='font-size:17px'>&#09;Seriozitate si profesionalism</li></p>
+              <p><li class="fa fa-credit-card" style="font-size:18px">&#09;Posibilitatea de retur</li></p>
+
+          </ul>
+            </figure>
+
+        </div>
+
+                </footer>
+
+
+			      </main>
+
+			
+		</div>
+	</body>
+</html>
