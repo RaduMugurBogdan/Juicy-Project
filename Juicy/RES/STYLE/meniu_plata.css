@@ -109,3 +109,12 @@ span.price {
 {
   background-color: #ff944d;
 }
+
+#main_body,.main_body_in_meniu_plata{
+	width:90%;
+	height:100%;
+	margin-left:5%;
+	margin-top:5px; 
+	overflow-y:auto;
+}
+
