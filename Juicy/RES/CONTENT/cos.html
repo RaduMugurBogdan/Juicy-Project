@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 	<head>
+		<meta charset="UTF-8">
 		<title>Juicy</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css\cos.css">
-		<link rel="stylesheet" type="text/css" href="css\meniu_plata.css">
+		<link rel="stylesheet" type="text/css" href="headerfooter.css">
+		<link rel="stylesheet" type="text/css" href="stylecos.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 	</head>
 	<body>
 		<div id="main_block">
 			<header>
-				<p id="cauta_produs"><a href="index.html">JUICY</a></p>
-				<input type="text" placeholder="Cauta orice doresti" id="bara_cautare" class="bara_cautare_cos">
-				<button class="fa fa-search" style="font-size:24px" id="buton_cauta"></button>
-        <a href="creare_conectare.html"> 
-					<button class="far fa-user" style="font-size:24px" id="buton_cont"></button>
-        </a>
-        <a href="cos.html"> 
-        <button class='fas fa-shopping-cart' style='color:white;font-size: 30px' id="buton_cos"></button>
-        </a>
+                
+				<p id="cauta_produs"> <a href="index.html"> JUICY </a></p>
+                     
+        <input type="text" placeholder="Cauta orice doresti" id="bara_cautare">
+        <button class="fa fa-search" style="font-size:24px;color:orangered" id="buton_cauta"> </button>
+         
+                 <button class="far fa-user" style="font-size:24px;color:orangered" id="buton_cont" onclick ="window.location.href = 'creare_conectare.html';"></button>
+                
+                <button class='fas fa-shopping-cart' style='color:orangered;font-size: 30px' id="buton_cos" onclick ="window.location.href = 'cos.html';"> </button>
+                
+                  <button class='fas fa-heart' style='font-size:30px;color:orangered' id="buton_favorite" onclick ="window.location.href = 'favorite.html';"></button>
+				
 			</header>
         <div id="main_body" class="main_body_cos">
           <p style="margin-left: 25px">&#09;Inca <u>nu</u> aveti produse adaugate in cos.</p>
@@ -37,8 +41,8 @@
     			<div class="container" id="chestie1">
 					  <h4><u>Cos</u> 
 						<span class="price" style="color:black">
-							<a href="index.html"><input type="submit" value="Continua cumparaturile"></a>
-							<a href="meniu_plata.html"><input type="submit" value="Finalizeaza comanda" id="plata" ></a>
+							<a class="button" href="index.html" style="color: #0c0c0c; padding: 10px; text-decoration: none">Continua cumparaturile</a>
+							<a class="button" href="index.html" id="plata" style="color: #0c0c0c; padding: 10px; text-decoration: none">Finalizeaza comanda</a>
          				 <i class="fa fa-shopping-cart"></i> 
          					 <b>4</b>
         			</span>
@@ -54,7 +58,7 @@
       	<hr>
       	<p>Total <span class="price" style="color:black"><b>$30</b></span></p>
       	</div>
-   				 </div>
+   			</div>
  			 </div>
 
 
@@ -84,10 +88,10 @@
 
   					<u> <strong>Avantajele JUICY</strong></u><hr>
   					<ul>
-  						<p><li class='fas fa-dollar-sign' style='font-size:18px'>&#09;&#09;&#09;Bauturi la cele mai mici preturi</li></p>
-  						<p><li class='fas fa-truck' style='font-size:17px'>&#09;Livrare la domiciliu in toata tara</li></p>
-  						<p><li class='fas fa-business-time' style='font-size:17px'>&#09;Seriozitate si profesionalism</li></p>
-  						<p><li class="fa fa-credit-card" style="font-size:18px">&#09;Posibilitatea de retur</li></p>
+  						<li class='fas fa-dollar-sign' style='font-size:18px'>&#09;&#09;&#09;Bauturi la cele mai mici preturi</li>
+  						<li class='fas fa-truck' style='font-size:17px'>&#09;Livrare la domiciliu in toata tara</li>
+  						<li class='fas fa-business-time' style='font-size:17px'>&#09;Seriozitate si profesionalism</li>
+  						<li class="fa fa-credit-card" style="font-size:18px">&#09;Posibilitatea de retur</li>
 
 					</ul>
   					</figure>
