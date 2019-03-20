@@ -1,43 +1,48 @@
-#main_body
-{
-	margin-top: 70px ;
-	height:auto;
-	color:blue;
 
-}
-.main_body_cos
-{
-	height: 100%;
-}
-#footer
-{
-	height:auto;
-}
 .row {
   
   display: flex;
   flex-wrap: wrap;
   margin: 0 -16px;
   width:98%;
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-right: 2%;
+}
 
+
+.box i
+{
+    font-size:24px;
+    color:#1a1aff;
+}
+
+label, div h3
+{
+  color:black;
+}
+
+.icon-container i
+{
+  font-size:50px;
+  color:red;
 }
 
 
 .main_body_in_meniu_plata
 {
-  margin-top: 6%;
+ 
   overflow: hidden;
   height: auto;
-  background-color: rgb(255,71,27,80%);
+  background-color: rgb(0,0,0,9%);
   border: 1px solid black;
   margin-bottom: 1%;
+   margin-top: 10%;
+  margin-left: 4.5%;
+  margin-right: 4.3%;
 }
 
 
-.col-25 {
-  
-  flex: 25%;
-}
 
 .col-50 {
   
@@ -50,7 +55,6 @@
 
 }
 
-.col-25,
 .col-50,
 .col-75 {
   padding: 0 15px;
@@ -59,8 +63,6 @@
 
 .container {
   padding: 5px 20px 15px 20px;
- 
-  border-radius: 3px;
 }
 
 .main_body_in_meniu_plata input[type=text] {
@@ -76,11 +78,6 @@ label {
   display: block;
 }
 
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
 
 .btn {
   background-color: #4CAF50;
@@ -109,12 +106,3 @@ span.price {
 {
   background-color: #ff944d;
 }
-
-#main_body,.main_body_in_meniu_plata{
-	width:90%;
-	height:100%;
-	margin-left:5%;
-	margin-top:5px; 
-	overflow-y:auto;
-}
-
