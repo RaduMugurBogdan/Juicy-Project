@@ -12,7 +12,7 @@ body {
  width:100%;
  }
 
-nav,footer,#main_body,.main_body_in_meniu_plata{
+nav,footer,#main_body,.main_body_in_cos{
 	border-style: solid;
 	border-width:2px;
 	color:#ff3300;
