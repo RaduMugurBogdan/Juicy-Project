@@ -81,6 +81,10 @@ span.price {
 	margin-top:4%; 
 	overflow-y:auto;
 }
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
 li{
    display:block;
    float:left;
