@@ -1,34 +1,38 @@
-#main_body
-{
+#main_body {
 	margin-top: 70px ;
 	height:auto;
 	color:rgb(0, 0, 255);
 
 }
-.main_body_cos
-{
+
+.main_body_cos {
   height: 100%;
 }
 
-#footer
-{
+#footer {
 	height:auto;
 }
+
 .row {
+  display: -ms-flexbox; /* IE10 */
   display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
   margin: 0 -16px;
 }
 
 .col-25 {
+  -ms-flex: 25%; /* IE10 */
   flex: 25%;
 }
 
 .col-50 {
+  -ms-flex: 50%; /* IE10 */
   flex: 50%;
 }
 
 .col-75 {
+  -ms-flex: 75%; /* IE10 */
   flex: 75%;
 }
 
@@ -100,42 +104,40 @@ span.price {
   margin-bottom: 2%;
 
 }
-#chestie1
-{
-  background-color:rgba(0, 0, 0, 0.1
-  );
+#chestie1 {
+  background-color:rgba(0, 0, 0, 0.1);
 }
-.bara_cautare_cos
-{
+
+.bara_cautare_cos {
   margin-top: 2%;
 }
-#billing
-{
+
+#billing {
   background-color: blue;
   
 }
-#bill
-{
+
+#bill {
   background-color: #ff471a;
 }
-#row
-{
+
+#row {
   background-color: black;
 }
-.row1
-{
+
+.row1 {
   background-color: #ff944d;
 }
-.cosasul
-{
+
+.cosasul {
   height: 50%;
 }
-.footer_abs
-{
+
+.footer_abs {
   background-color: green;
 }
-.bara_cautare_plata
-{
+
+.bara_cautare_plata {
     margin-top: 2%;
 }
 #main_body,.main_body_in_meniu_plata{
@@ -144,4 +146,11 @@ span.price {
 	margin-left:5%;
 	margin-top:4%; 
 	overflow-y:auto;
+}
+li
+{
+   display:block;
+   float:left;
+   width:300px;
+   padding:6px; 
 }
