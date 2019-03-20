@@ -16,86 +16,54 @@
     
 	<body>
 
-		<div id="main_block">
+<div id="main_block">
             
-			<header>
-        <p id="cauta_produs"> <a href="../../index.html"> JUICY </a></p>  
+	<header>
+        <p id="cauta_produs"> <a href="../../index.html"> JUICY </a></p>  x
         <input type="text" placeholder="Cauta orice doresti" id="bara_cautare">
-        <button class="fa fa-search" id="buton_cauta"> </button>
-        <button class="far fa-user" id="buton_cont" onclick ="window.location.href = 'creare_conectare.html';"></button>
-        <button class='fas fa-shopping-cart' id="buton_cos" onclick ="window.location.href = 'cos.html';"> </button>
-        <button class='fas fa-heart' id="buton_favorite" onclick ="window.location.href = 'favorite.html';"></button>
+        <button class="fa fa-search" type="submit" id="buton_cauta"> </button>
+        <button class="far fa-user" id="buton_cont" onclick ="window.location.href = '../CONTENT/log_in.html';"></button>
+        <button class='fas fa-shopping-cart'  id="buton_cos" onclick ="window.location.href = '../CONTENT/cos.html';"> </button>
+        <button class='fas fa-heart' id="buton_favorite" onclick ="window.location.href = '../CONTENT/favorite.html ';"></button>
     </header>
 
-
-
-
-
-            <main class = "main_body_in_meniu_plata">
-
-              
-
+<main class = "main_body_in_meniu_plata">
  <div class="row" >
   <div class="col-75" >
     <div class="container" >
         <div class="row">
           <div class="col-50" >
-          
             <label for="name" ><i class="fa fa-user"></i> Nume complet</label>
             <input type="text" id="name" class="row1" placeholder="ex: Popescu Vasile">
-
             <label for="email" ><i class="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" class="row1" placeholder="ex: vasile.popescu@yahoo.com">
-
             <label  ><i class="fa fa-address-card"></i> Adresa</label>
             <input type="text" id="adr" class="row1" placeholder="ex: Strada Primaverii, nr.7, bloc T2, scara A1, apartament 35">
-
             <label  ><i class="fa fa-institution"></i> Oras</label>
             <input type="text" id="city" class="row1" placeholder="ex: Constanta">
-
-
-            
           </div>
-
           <div class="col-50">
             <h3 >Plata</h3>
             <label for="name" >Modalitati acceptate</label>
             <div class="icon-container">
               <i class='fab fa-cc-mastercard' ></i>
-              
               <i class='fab fa-cc-visa' ></i>
-              
             </div>
-
             <label for="cname" >Titular card (numele scris pe partea din fata a cardului)</label>
             <input type="text" id="cname" class="row1" placeholder="ex: POPESCU VASILE">
-
             <label for="ccnum" >Numar card (numarul de 16 cifre scris pe partea din fata a cardului)</label>
             <input type="text" id="ccnum" placeholder="ex: 1111-2222-3333-4444" class="row1" >
-
-
-            
             </div>
-
-
           </div>
-
-        </div>
-
-        
+        </div>      
         <input type="submit" value="Plaseaza comanda" class="btn">
-
-
       </div>
     </div>
   </div>
-
-
+  <div class="mapouter"><div class="gmap_canvas"><iframe width="439" height="353" id="gmap_canvas" src="https://maps.google.com/maps?q=romania&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:353px;width:439px;}.gmap_canvas {overflow:hidden;background:none!important;height:353px;width:439px;}</style></div>
          <footer>
-               
             <div class="box-set">
-                <figure class="box">
-                    
+                <figure class="box">   
                 <p class="subTitluFooter">Despre noi</p><hr>
                   <i class='fab fa-github-square' id="gitLogo"></i>
                   <a class="numeFacebook" href="https://github.com/RaduMugurBogdan/Juicy-Project"> Proiectul nostru pe Github</a><br>
@@ -117,17 +85,8 @@
                   <i class='fas fa-truck' id="footerLogos"></i><span class="numeFacebook">Livrare la domiciliu in toata tara</span><br>
                   <i class='fas fa-business-time' id="footerLogos"></i><span class="numeFacebook">Seriozitate si profesionalism</span><br>
                   <i class="fa fa-credit-card" id="footerLogos"></i><span class="numeFacebook">Posibilitatea de retur</span><br>
-              
                 </figure>
-    
             </div>
-    
-                    </footer>
-
-
-			      
-
-			
-		
+        </footer>
 	</body>
 </html>
