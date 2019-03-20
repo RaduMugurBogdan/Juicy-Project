@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<title>
@@ -11,15 +12,13 @@
 	<body id="general_content">
 		<div id="main_block">
 			<header>
-						<p id="cauta_produs"> <a href="index.html"> JUICY </a></p>
+				<p id="cauta_produs"> <a href="index.html"> JUICY </a></p>
                 
 				<input type="text" placeholder="Cauta orice doresti" id="bara_cautare">
                 
 				<button class="fa fa-search" style="font-size:24px" id="buton_cauta"> </button>
                 
-                <a href="creare_conectare.html"> <button class="far fa-user" style="font-size:24px" id="buton_cont"></button>
-                </a>
-
+                <a href="creare_conectare.html"> <button class="far fa-user" style="font-size:24px" id="buton_cont"></button></a>
 
                 <a href="cos.html"> 
                 <button class='fas fa-shopping-cart' style='color:white;font-size: 30px' id="buton_cos"> </button>
@@ -32,7 +31,7 @@
 			<div id="product_data_container">
 				<div id="product_pictures_list">
 					<div id="big_picture">
-						<img src="../MEDIA_CONTENT/slideShowPictures/p3.jpg" id="inner_image" onclick="fullScreenImage(this)">
+						<img src="../MEDIA_CONTENT/pictures_items/coca-cola/0.5/picture1.jpg" id="inner_image" onclick="fullScreenImage(this)">
 					</div>
 					<div id="pictures_list_iterator">
 						<div id="list_buttons_block">
@@ -49,6 +48,7 @@
 					<div id="buttons_group">
 						<button id="button_buy">Adauga in cos</button>
 						<button id="button_fav">Adauga la favorite</button>
+						<h1 id="info_stoc">Stoc limitat</h1>
 					</div>
 				</div>
 			</div>
@@ -58,7 +58,7 @@
 					<button class="button_rev_men" onclick="setReviewsBody(this)">
 						Descriere
 					</button>
-					<button class="button_rev_men">
+					<button class="button_rev_men"  onclick="setReviewsBody2(this)">
 						Specificatii
 					</button>
 					<button class="button_rev_men">
