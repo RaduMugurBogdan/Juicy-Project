@@ -50,7 +50,7 @@
   border-radius: 3px;
 }
 
-.main_body_in_meniu_plata input[type=text] {
+.main_body_in_cos input[type=text] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
@@ -112,31 +112,6 @@ span.price {
   margin-top: 2%;
 }
 
-#billing {
-  background-color: blue;
-  
-}
-
-#bill {
-  background-color: #ff471a;
-}
-
-#row {
-  background-color: black;
-}
-
-.row1 {
-  background-color: #ff944d;
-}
-
-.cosasul {
-  height: 50%;
-}
-
-.footer_abs {
-  background-color: green;
-}
-
 .bara_cautare_plata {
     margin-top: 2%;
 }
@@ -147,8 +122,7 @@ span.price {
 	margin-top:4%; 
 	overflow-y:auto;
 }
-li
-{
+li{
    display:block;
    float:left;
    width:300px;
