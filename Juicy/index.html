@@ -4,6 +4,8 @@
 			MyWebSite
 		</title>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="RES/STYLE/componente/main_body.css">
+		<link rel="stylesheet" type="text/css" href="RES/STYLE/componente/nav.css">
 		<link rel="stylesheet" type="text/css" href="RES/STYLE/mainStyle.css">
 		<link rel="stylesheet" type="text/css" href="RES/STYLE/componente/header+footer.css">
 		<link rel="stylesheet" type="text/css" href="RES/STYLE/componente/product_rep/product_rep.css">
@@ -12,7 +14,7 @@
 	<body>
 		<div id="main_block">
 			<header>
-					<p id="cauta_produs"> <a href="index.html"> JUICY </a></p>
+				<p id="cauta_produs"> <a href="index.html"> JUICY </a></p>
                 
 				<input type="text" placeholder="Cauta orice doresti" id="bara_cautare">
                 
@@ -28,13 +30,13 @@
 			</header>
 			<nav>
 				<div id="options_list">
-					<div class="rubrica" onmouseover="onHoverNav(this)" onmouseout="onHoverNav(this)">RUBRICA 1</div>
+					<div class="rubrica" id="rubrica_1" onmouseover="onHoverNav(this)" onmouseout="onHoverNav(this)">Sucuri Carbogazoase</div>
 					
-					<div class="rubrica" onmouseover="onHoverNav(this)" onmouseout="onHoverNav(this)">RUBRICA 2</div>
+					<div class="rubrica" id="rubrica_2" onmouseover="onHoverNav(this)" onmouseout="onHoverNav(this)">Sucuri Tonice</div>
 					
-					<div class="rubrica" onmouseover="onHoverNav(this)" onmouseout="onHoverNav(this)">RUBRICA 3</div>
+					<div class="rubrica" id="rubrica_3" onmouseover="onHoverNav(this)" onmouseout="onHoverNav(this)">Suscuri Naturale</div>
 					
-					<div class="rubrica" onmouseover="onHoverNav(this)" onmouseout="onHoverNav(this)">RUBRICA 4</div>
+					<div class="rubrica" id="rubrica_4" onmouseover="onHoverNav(this)" onmouseout="onHoverNav(this)">Bauturi Energizante</div>
 				</div>	
 				<div id="detailed_list">
 					<div id="slideShowContainer">
@@ -44,51 +46,56 @@
 			<div id="main_body">
 				<!--**********************************************************************************************-->
 				
+			
+				<div id="product_container">
+					
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/coca-cola/0.25/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Coca-Cola 0.250</div>
+					
+				</div>
 				
 				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/coca-cola/0.300/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Coca-Cola 0.300</div>
 				</div>
 				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
-				</div>
-				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<a href="RES/CONTENT/product_page.html">
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/coca-cola/0.5/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Coca-Cola 0.500</div>
+					</a>
 				</div><div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/coca-cola/0.5/picture2.jpg" id="product_image"></div>
+					<div id="product_container_footer">Coca-Cola 0.500</div>
 				</div>
 				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/coca-cola/1l/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Coca-Cola 1L</div>
 				</div>
 				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/coca-cola/2l/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Coca-Cola 2L</div>
 				</div><div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/coca-cola/2l/picture2.jpg" id="product_image"></div>
+					<div id="product_container_footer">Coca-Cola 2L</div>
 				</div>
 				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/coca-cola/2.5l/picture1.png" id="product_image"></div>
+					<div id="product_container_footer">Coca-Cola 2L</div>
 				</div>
 				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/fanta/0.25/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Fanta 0.250</div>
 				</div><div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/fanta/0.5/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Fanta 0.5</div>
 				</div>
 				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/fanta/1l/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Fanta 1L</div>
 				</div>
 				<div id="product_container">
-					<div id="image_container"><img src="RES/MEDIA_CONTENT/slideShowPictures/p1.jpg" id="product_image"></div>
-					<div id="product_container_footer">MY FOOTER</div>
+					<div id="image_container"><img src="RES/MEDIA_CONTENT/pictures_items/fanta/2l/picture1.jpg" id="product_image"></div>
+					<div id="product_container_footer">Fanta 2L</div>
 				</div>
 				<!--**********************************************************************************************-->
 			</div>
