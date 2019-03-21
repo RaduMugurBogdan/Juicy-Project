@@ -80,10 +80,10 @@ footer{
 	cursor: pointer;
 }
 
-#buton_cos,#buton_cont,#buton_favorite,#buton_cauta{
+#buton_cos,#buton_cont,#buton_favorite,#buton_cauta,#buton_contact{
 	
 	height:80%;
-	font-size:30px;
+	font-size:2vw;
 	color:rgba(255, 0, 0, 0.644);	
 	outline:none;
 	background-color: inherit;
@@ -92,7 +92,7 @@ footer{
 	 
 }
 
-#buton_cos:focus,#buton_cont:focus,#buton_favorite:focus{
+#buton_cos:focus,#buton_cont:focus,#buton_favorite:focus,#buton_contact:focus{
 	color:yellow;
 	 
 }
