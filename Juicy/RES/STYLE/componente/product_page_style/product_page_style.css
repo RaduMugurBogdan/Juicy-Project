@@ -1,5 +1,5 @@
 body{
-	background-image: url("../../../MEDIA_CONTENT/background_image.jpg");
+	background-image: url("../../../MEDIA_CONTENT/trial1.3.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -8,6 +8,7 @@ body{
 #main_body{
 	width:90%;
 	margin-left:5%;
+	background-color:rgba(0, 0, 0, 0.534);
 }
 #top_hr{
 	margin-top:5%;
@@ -23,11 +24,15 @@ body{
 	color:red;
 	text-align: center;
 	text-shadow:5px 5px 15px black;
-	height:15%;
+	height:auto;
 	background-image:linear-gradient(red,black,black);
 	border-style:solid;
 	border-color:red;
 	border-radius: 20px;
+	margin-left:auto;
+	margin-right:auto;
+	width:auto;
+	font-size:180%;
 }
 #product_data_container{
 	display:flex;
