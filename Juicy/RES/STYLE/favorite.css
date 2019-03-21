@@ -1,155 +1,149 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-body {
-	font-family: 'Roboto', sans-serif;
-	background-image: url("../MEDIA_CONTENT/background_image.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-h4{
-    text-decoration: none;
-    color: #0c0c0c;
+#main_body {
+	margin-top: 70px ;
+	height:auto;
+    color:white;
+    
 }
 
-
-nav,footer,#main_body,.main_body_in_favorite{
-    border-style: solid;
-	border-width:2px;
-	color:#0e0606;
-    font-size: 17px;
-    font-family: 'Times New Roman', Times, serif;
-    text-shadow: 0 0 3px rgb(0, 0, 0);
-	border-color:white;
-	border-radius:10px;
-	background-color:rgba(0, 0, 0, 0.3);
-	border: 1px solid #ff5c33;
+body{
+    background: url(../MEDIA_CONTENT/trial1.3.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-header{
-	display:flex;
-	border-radius: 15px;
-	flex-direction:row;
-	align-items:center; 
-	position:fixed;
-	height:60px;
-	width:90%;
-	top:0%;
-	left:5%;
-	background-image: linear-gradient(grey,black,black);
-
+.main_body_cos {
+  height: 100%;
 }
 
-.box {
-  color: orangered;
-  float: left;
-  margin: 2%;
-  width: 40%;
-}
-  
-footer{
-    display: flex;
-	width:90%;
-	margin-left:5%;
-    background-image: linear-gradient(grey,black,black);
-    float:left;
+#footer {
+	height:auto;
 }
 
-#cauta_produs a{
-    text-decoration: none;
-    padding-left: 40px;
-    font-size: 20px;
-    color: #ff3300;
-    margin-left: 3%;
-    font-family: Georgia;
-    }
-
-#bara_cautare{
-	width:50%;
-	height:80%;
-	color:orangered;
-	border-style:solid;
-	border-color:white;
-	border-radius:20px;
-	background-color:inherit;
-	top:2%;
-	margin-left:50px;
-    font-size: 15px;
-    padding-left: 2%;
-    border: 1px solid #3b3b3b;
-    background: #0c0c0c;
-    outline:none;
-
+.container {
+  background-color:#f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: rgba(255, 0, 0, 0.644) 1px solid;  border-radius: 3px;
 }
 
-
-#buton_cauta
-{
-	height:80%;
-	font-size:15px;
-	color:white;	
-	outline:none;
-	 background-color: inherit;
-	 border:none;
-	cursor: pointer;
+.main_body_in_cos input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: rgba(255, 0, 0, 0.644) 1px solid;
+  border-radius: 3px;
 }
 
-#buton_cos,#buton_cont,#buton_favorite{
-	
-	height:80%;
-	font-size:15px;
-	color:white;	
-	outline:none;
-	 background-color: inherit;
-	 border:none;
-	 width:11%;
-	 
+label {
+  margin-bottom: 10px;
+  display: block;
 }
 
-ul{
-    display: flex;
-    flex-wrap: wrap;
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
 }
-li{
-   display: flex;
-   float:left;
-   width:300px;
-   padding:6px; 
-   list-style-position: inside;
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 98%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
 }
-.price {
-    float: inherit;
-    color: grey;
-    padding-left: 900px;
-  }
-#interior
-{
+
+span.price {
+  float: right;
+  color: white;
+}
+
+#interior{
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2%;
 
 }
-#main_body,.main_body_in_favorite{
-    background-color:#f2f2f2;
+#interior1 {
+  background-color: rgba(0, 0, 0, 0.699);
+}
+
+.bara_cautare_cos {
+  margin-top: 2%;
+}
+
+.bara_cautare_plata {
+    margin-top: 2%;
+}
+#main_body,.main_body_in_meniu_plata{
 	width:90%;
 	height:100%;
 	margin-left:5%;
 	margin-top:4%; 
 	overflow-y:auto;
 }
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+li{
+   display:block;
+   float:left;
+   width:300px;
+   padding:6px; 
+}
 .button {
-    background-color: rgb(162, 186, 194); 
-    border: none;
     color: white;
-    padding: 32px;
+    padding: 5px;
+    margin-right:10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    border-radius: 15px;
+    border: rgba(255, 0, 0, 0.644) 1px solid;
+    border-radius:15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: 700;
+    float:right;
+    background: inherit;
+  }
+
+.button:hover{
+      background-color: rgba(255, 0, 0, 0.644);
+      box-shadow: 0 0 200px 1vw rgba(255, 255, 255, 0.37);
 
   }
-  #clear{
-      height: 275px;
+
+  .col-25 p a{
+      color:white;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      font-weight: 700;
+  }
+  h4,p,u{
+      text-decoration: none;
+  }
+  hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(255, 0, 0, 0.644);
+    margin: 1em 0;
+    padding: 0; 
+  }
+
+  #main_block{
+      transform: translateY(10%);
+  }
+  
+  .paragraph01{
+      margin-left:5%;
+      font-size:3vw;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 700;
   }
