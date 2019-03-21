@@ -18,7 +18,17 @@ body{
 	margin-left:5%;
 }
 
-
+#info_stoc{
+	font-weight: bold;
+	color:red;
+	text-align: center;
+	text-shadow:5px 5px 15px black;
+	height:15%;
+	background-image:linear-gradient(red,black,black);
+	border-style:solid;
+	border-color:red;
+	border-radius: 20px;
+}
 #product_data_container{
 	display:flex;
 	margin-top:5px;
@@ -83,8 +93,11 @@ body{
 	
 }
 #product_name{
-	font-size:50px;
+	font-size:3vw;
 	color:red;
+	margin-bottom: 5px;
+	font-weight:bold;
+	text-shadow: 10px 10px 10px black;
 	width:90%;
 	margin-left:5%;
 	height:10%;
@@ -109,6 +122,9 @@ body{
 	margin-top:5px; 
 }
 #reviews_body{
+	color:white;
+	font-weight: bold;
+	font-size:20px;
 	border-width:2px;
 	margin-top:5px; 
 	width:100%;
@@ -133,17 +149,13 @@ body{
 	max-height: 70%;
 }
 
-
-
-
-
 /*********************************************************************************************/
 
 .button_rev_men{
 	outline: none;
 	text-align: center;
-	font-size: 100%;
-	width:10%;
+	font-size: 1vw;
+	width:auto;
 	border-style:none;
 	border-right-style: solid;
 	border-right-color:white;
@@ -169,7 +181,6 @@ body{
 	border-radius:5px;
 	outline:none;
 	width:30%;
-	height:15%;
 	font-size:100%;
 	color:white;
 	background-image:linear-gradient(grey,black,black);
