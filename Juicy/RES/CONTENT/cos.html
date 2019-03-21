@@ -4,30 +4,24 @@
 		<meta charset="UTF-8">
 		<title>Juicy</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="header_footer_cos.css">
-		<link rel="stylesheet" type="text/css" href="stylecos.css">
+		<link rel="stylesheet" type="text/css" href="../STYLE/componente/header+footer.css">
+		<link rel="stylesheet" type="text/css" href="../STYLE/stylecos.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-	</head>
+    </head>
+    
 	<body>
+        <header>
+            <p id="cauta_produs"> <a href="../../index.html"> JUICY </a></p>  x
+            <input type="text" placeholder="Cauta orice doresti" id="bara_cautare">
+            <button class="fa fa-search" type="submit" id="buton_cauta"> </button>
+            <button class="far fa-user" id="buton_cont" onclick ="window.location.href = '../CONTENT/log_in.html';"></button>
+            <button class='fas fa-shopping-cart'  id="buton_cos" onclick ="window.location.href = '../CONTENT/cos.html';"> </button>
+            <button class='fas fa-heart' id="buton_favorite" onclick ="window.location.href = '../CONTENT/favorite.html ';"></button>
+        </header>
 		<div id="main_block">
-			<header>
-                
-				<p id="cauta_produs"> <a href="index.html"> JUICY </a></p>
-                     
-        <input type="text" placeholder="Cauta orice doresti" id="bara_cautare">
-        <button class="fa fa-search" style="font-size:24px;color:orangered" id="buton_cauta"> </button>
-         
-                 <button class="far fa-user" style="font-size:24px;color:orangered" id="buton_cont" onclick ="window.location.href = 'creare_conectare.html';"></button>
-                
-                <button class='fas fa-shopping-cart' style='color:orangered;font-size: 30px' id="buton_cos" onclick ="window.location.href = 'cos.html';"> </button>
-                
-                  <button class='fas fa-heart' style='font-size:30px;color:orangered' id="buton_favorite" onclick ="window.location.href = 'favorite.html';"></button>
-				
-			</header>
         <div id="main_body" class="main_body_cos">
-          <p style="margin-left: 25px">&#09;Inca <u>nu</u> aveti produse adaugate in cos.</p>
-          <p style="margin-left: 25px">Doar pentru testare am inclus:</p>
+          <p class="paragraph01" >Inca nu aveti produse adaugate in cos. Doar pentru testare am inclus:</p>
 		
           <div id="box_cumparate">
             <div id="box_inside">
@@ -40,64 +34,52 @@
 			<div class="col-25" id="interior">
     			<div class="container" id="interior1">
 					  <h4><u>Cos</u> 
-						<span class="price" style="color:black">
-							<a class="button" href="index.html" style="color: #0c0c0c; padding: 10px; text-decoration: none">Continua cumparaturile</a>
-							<a class="button" href="index.html" id="plata" style="color: #0c0c0c; padding: 10px; text-decoration: none">Finalizeaza comanda</a>
+						<span class="price" >
+							<a class="button" href="../../index.html">Continua cumparaturile</a>
+							<a class="button" href="../CONTENT/meniu_plata.html" id="plata">Finalizeaza comanda</a>
          				 <i class="fa fa-shopping-cart"></i> 
          					 <b>4</b>
         			</span>
 					  </h4>
 					  <hr>
-			  <p><a href="#">Produs 1</a> <span class="price" style="color:black">$15</span></p>
+			  <p><a href="#">Produs 1</a> <span class="price" >$15</span></p>
 			  <hr>
-				<p><a href="#">Produs 2</a> <span class="price" style="color:black">$5</span></p>
+				<p><a href="#">Produs 2</a> <span class="price" >$5</span></p>
 			  <hr>
-				<p><a href="#">Produs 3</a> <span class="price" style="color:black">$8</span></p>
+				<p><a href="#">Produs 3</a> <span class="price" >$8</span></p>
 			  <hr>
-				<p><a href="#">Produs 4</a> <span class="price" style="color:black">$2</span></p>
+				<p><a href="#">Produs 4</a> <span class="price" >$2</span></p>
       	<hr>
-      	<p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+      	<p>Total <span class="price" ><b>$30</b></span></p>
       	</div>
    			</div>
  			 </div>
-
-
-
-
-			<footer>
-               
-				<div class="box-set">
-  					<figure class="box">
-
-  					<u> <strong>Despre noi</strong></u><hr>
-  					  <i class='fab fa-github-square' style='font-size:24px;color:#8c8c8c'></i>
-  					  <a href="https://github.com/RaduMugurBogdan/Juicy-Project" style="color: orangered"> 
-  					  	&#09;Proiectul nostru pe Github
-  					      </a><br>
-
-  					<i class='fab fa-facebook-square' style='font-size:24px;color:#1a1aff'></i> <a href="https://www.facebook.com/adrian.gemeniuc.8" style="color: orangered">&#09; Adrian Gemeniuc</a>   <br>
-
-  					<i class='fab fa-facebook-square' style='font-size:24px;color:#1a1aff'></i>  <a href="https://www.facebook.com/adelin.vasiliu" style="color: orangered">&#09;Adelin Vasiliu</a>    <br>
-
-  					<i class='fab fa-facebook-square' style='font-size:24px;color:#1a1aff'></i><a href="https://ro-ro.facebook.com/georgescu.florin.33" style="color: orangered">&#09;Florin Georgescu</a><br>
-
-  					<i class='fab fa-facebook-square' style='font-size:24px;color:#1a1aff'></i><a href="https://www.facebook.com/bogdan.radu.7106" style="color: orangered">&#09;Bogdan Radu</a>
-
-  					</figure>
-  					<figure class="box">
-
-  					<u> <strong>Avantajele JUICY</strong></u><hr>
-  					<ul>
-  						<li class='fas fa-dollar-sign' style='font-size:18px'>&#09;&#09;&#09;Bauturi la cele mai mici preturi</li>
-  						<li class='fas fa-truck' style='font-size:17px'>&#09;Livrare la domiciliu in toata tara</li>
-  						<li class='fas fa-business-time' style='font-size:17px'>&#09;Seriozitate si profesionalism</li>
-  						<li class="fa fa-credit-card" style="font-size:18px">&#09;Posibilitatea de retur</li>
-
-					</ul>
-  					</figure>
-
-				</div>
-
+              <footer>
+                    <div class="box-set">
+                        <figure class="box">   
+                        <p class="subTitluFooter">Despre noi</p><hr>
+                          <i class='fab fa-github-square' id="gitLogo"></i>
+                          <a class="numeFacebook" href="https://github.com/RaduMugurBogdan/Juicy-Project"> Proiectul nostru pe Github</a><br>
+            
+                        <i class='fab fa-facebook-square' id="facebookLogo"></i><a class="numeFacebook" href="https://www.facebook.com/adrian.gemeniuc.8" >Adrian Gemeniuc</a><br>
+            
+                        <i class='fab fa-facebook-square' id="facebookLogo"></i><a class="numeFacebook" href="https://www.facebook.com/adelin.vasiliu">Adelin Vasiliu</a><br>
+            
+                        <i class='fab fa-facebook-square' id="facebookLogo"></i><a class="numeFacebook" href="https://ro-ro.facebook.com/georgescu.florin.33" >Florin Georgescu</a><br>
+            
+                        <i class='fab fa-facebook-square' id="facebookLogo"></i><a class="numeFacebook" href="https://www.facebook.com/bogdan.radu.7106" >Bogdan Radu</a>
+            
+                        </figure>
+                        <figure class="box">
+            
+                        <p class="subTitluFooter">Avantajele JUICY</p><hr>
+                                
+                          <i class='fas fa-dollar-sign' id="footerLogos"></i><span class="numeFacebook">Bauturi la cele mai mici preturi</span><br>
+                          <i class='fas fa-truck' id="footerLogos"></i><span class="numeFacebook">Livrare la domiciliu in toata tara</span><br>
+                          <i class='fas fa-business-time' id="footerLogos"></i><span class="numeFacebook">Seriozitate si profesionalism</span><br>
+                          <i class="fa fa-credit-card" id="footerLogos"></i><span class="numeFacebook">Posibilitatea de retur</span><br>
+                        </figure>
+                    </div>
                 </footer>
 		</div>
 	</body>
