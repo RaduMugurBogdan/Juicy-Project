@@ -111,29 +111,5 @@ nav{
 	width:50%;
 }
 
-.rubrica{
-	color:white;
-	text-align: center;
-	font-size:20px;
-	background-image:linear-gradient(rgba(128, 128, 128,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-	flex:auto;
-	border-top-style:solid;
-	border-bottom-style:solid;
-	border-color:white;
-	border-width:2px;
-	width:100%;
-}
-
-.rubrica:hover{
-	text-align:right;
-	color:orange; 
-	border-style:none;
-	padding-top:10%;
-	height:25%;
-	color:red;
-	font-size:50px;
-}
-
-
 
 /**********************************************************************************/
