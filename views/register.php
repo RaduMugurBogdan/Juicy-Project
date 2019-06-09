@@ -31,8 +31,6 @@
                 <a href="login.php">Login</a>
                 <!-- <a href="#">Forgot Password</a> -->
             </div>
-
-
             <button class="btn special blue" type="submit" name="trimite">Send</button>
         </form>
     </div>
