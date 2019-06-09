@@ -229,8 +229,27 @@
             </ul>
         </div>
     </div>
+    <div class="container comercials">
+        <div class="list-of-comercials">
+            <div class="comercial-container">
+                <div class="comercial-header">
+                    <img src="../assets/images/poza.jpg" alt="">
+                </div>
+            </div>
+            <div class="comercial-container">
+                <div class="comercial-header">
+                    <img src="https://d2td6mzj4f4e1e.cloudfront.net/wp-content/uploads/sites/9/2018/10/Fruit-Shoot-Advert-620x330.png" alt="">
+                </div>
+            </div>
+            <div class="comercial-container">
+                <div class="comercial-header">
+                    <img src="https://locomotion.co.uk/wp-content/uploads/2017/02/Tropicana89oz-600x338.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="container feedback">
+    <div class="container feedback" id="contact">
         <h2>Send us a message!</h2>
         <form class="formContactContainer">
             <input class="inputBoxes" type="text" placeholder="Full name..." name="nume">
