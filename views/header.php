@@ -6,7 +6,7 @@ $last_dir = $dirs[count($dirs) - 1];
     
     ?>
     <div class="logo-body">
-        <img src="../assets/images/logo.png" alt="23andfour logo" class="logo">
+        <img src="../assets/images/JuicyLogoColorBlack.png" alt="23andfour logo" class="logo">
     </div>
     <nav>
         <a href='#' class="hide-desktop">

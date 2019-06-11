@@ -158,8 +158,8 @@ ul {
   width: 250px;
 }
 
-.logo.footer{
-    background: #fff;
+.logo.footer {
+  background: #fff;
 }
 .hide-mobile {
   display: none;
@@ -300,8 +300,6 @@ a {
   transform: skewY(0deg);
 }
 
-
-
 h2.title {
   font-size: 35px;
   color: rgb(65, 17, 17);
@@ -386,7 +384,86 @@ nav ul li a:hover {
 i.fas {
   color: red;
 }
+.top-bar-shop .fas {
+  color: white;
+  display: inline-block;
+}
 
+.top-bar-shop {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  max-width: 60%;
+}
+
+.top-search-container {
+  width: auto;
+  display: flex;
+}
+.top-search-container input {
+  width: 300px;
+  border-right: none;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 90%;
+  background: #f1f1f1;
+}
+
+.top-search-container button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #00c2ff;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+.top-search-container button:active {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: white;
+  color: white;
+  font-size: 17px;
+  border: 1px solid red;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+.top-search-container button:hover {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #008eb9;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+.top-search-container button:active i {
+  color: black;
+  display: inline-block;
+}
+
+.top-bar-shop span {
+  font-size: 20px;
+}
+
+.top-bar-selector {
+  width: 150px;
+  border-right: none;
+  padding: 6px;
+  font-size: 15px;
+  border: 1px solid grey;
+  float: left;
+  width: 30%;
+  background: #f1f1f1;
+}
 .listOfDiscountItems {
   display: flex;
   flex-flow: row;
@@ -394,7 +471,11 @@ i.fas {
   justify-content: space-evenly;
   align-items: center;
 }
-
+.item-header {
+  max-height: 300px;
+  max-width: 300px;
+  overflow: hidden;
+}
 .item-container {
   min-width: 300px;
   padding: 10px;
@@ -405,9 +486,15 @@ i.fas {
   margin: 10px;
 }
 
+.item-logo {
+  max-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
 .item-logo > img {
   width: 100% !important;
-  max-width: 300px !important;
 }
 .item-price-discount span {
   position: relative;
@@ -679,45 +766,183 @@ h2 span {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.links{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.active{
+.active {
   border-bottom: 1px solid red;
-  color:red;
+  color: red;
 }
-.links a{
-    color:#282a2d;
-    text-decoration: none;
-    display: block;
-    margin: 10px;
+.links a {
+  color: #282a2d;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
 }
-.links a:hover{
-    color:#be0a0a;
+.links a:hover {
+  color: #be0a0a;
 }
 
 .container.register {
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 100px;
-    width:40%;
-  }
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 100px;
+  width: 40%;
+}
 
+.special-container {
+  background: #fff;
+  min-height: 500px;
+  width: 80% !important;
+  margin: 20px auto !important;
+  border-radius: 10px;
+}
+.aside-panel {
+  width: 180px;
+}
+.aside-panel hr {
+  color: #00c2ff;
+}
 
-  
-  .container.register  h2 {
-    font-size: 40px;
-    margin: 20px;
-  }
-  .formContactContainer.register {
-    /* width:400px; */
-    border: #00c2ff 1px solid;
-  }
+.filter-options {
+  overflow-y: scroll;
+  max-height: 250px;
+  height: auto;
+  width: 180px;
+}
+
+.aside-title {
+  padding: 10px !important;
+  box-sizing: border-box;
+  border-bottom: 2px solid #f2f2f2;
+  background: #f5f5f5;
+  border-radius: 5px 5px 0 0;
+}
+.filter-container {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  box-shadow: 0 10px 10px -5px #f2f2f2;
+  text-align: left;
+}
+
+.filter-container p {
+  padding-left: 20px;
+  margin: 3px;
+  font-weight: 600;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #00c2ff;
+  text-decoration-style: dotted;
+}
+
+input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #00c2ff;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="checkbox"]:after {
+  width: 15px;
+  height: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="checkbox"]:checked:after {
+  width: 15px;
+  height: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #00c2ff;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.shop-container {
+  width: 78% !important;
+  padding: 10px !important;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 5px;
+}
+
+.choiceApply {
+  padding: 10px;
+}
+.effect1 {
+  box-shadow: 0 10px 10px -5px #9e9999;
+}
+
+.filter-side {
+  width: 20%;
+  min-width: 200px;
+  float: left;
+}
+
+.container.register h2 {
+  font-size: 40px;
+  margin: 20px;
+}
+.formContactContainer.register {
+  /* width:400px; */
+  border: #00c2ff 1px solid;
+}
+
+.show-filters {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-view-shop {
+  float: left;
+  width: 78%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* responsive code*/
 
 @media only screen and (min-width: 650px) {
+  .shop-container {
+    width: 100% !important;
+  }
   .server {
     width: 50%;
   }
@@ -756,6 +981,9 @@ h2 span {
 }
 
 @media only screen and (min-width: 950px) {
+  .shop-container {
+    width: 100% !important;
+  }
   .subhed {
     margin-bottom: 15%;
   }
@@ -839,5 +1067,27 @@ h2 span {
     position: absolute;
     top: 50px;
     right: 50px;
+  }
+
+  .filter-side {
+    display: none;
+  }
+
+  .shop-container,.main-view-shop {
+    width: 100% !important;
+  }
+  .show-filters {
+    display: block;
+  }
+  .top-search-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .sub-title {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .top-bar-selector {
+    width: 100%;
   }
 }
