@@ -195,7 +195,7 @@
                 </div>
             </div>
             <div class="see-all-item">
-                <a href="#">
+                <a href="views\shop.php">
                     <button class="btn normal red">
                         See all products
                     </button>
@@ -212,18 +212,18 @@
             <ul>
                 <li>
                     <figure>
-                        <img src="../assets/images/user1.png" alt="user testimonial picture 1">
+                        <img src="../assets/images/contact1-adelin.png" class="contact-pic1" alt="user testimonial picture 1">
                         <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua.</blockquote>
-                        <figcaption>- Jane Doe</figcaption>
+                        <figcaption>- Vasiliu Adelin</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="../assets/images/user2.png" alt="user testimonial picture 2">
+                        <img src="../assets/images/user2.png" class="contact-pic2" alt="user testimonial picture 2">
                         <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua.</blockquote>
-                        <figcaption>- John Doe</figcaption>
+                        <figcaption>- Radu Bogdan</figcaption>
                     </figure>
                 </li>
             </ul>

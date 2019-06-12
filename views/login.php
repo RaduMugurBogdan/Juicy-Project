@@ -1,3 +1,30 @@
+<?php 
+require_once '../controllers/AccountController.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    AccountController::SignIn();
+}
+?>
+<?php
+require_once 'checkRoutes.php';
+$error = '';
+$mess = '';
+if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    switch ($error) {
+        case 'false':
+            $mess = 'Te rugam sa te logezi.';
+        case 'emailNotValid':
+            $mess = 'Email-ul sau parola sunt incorecte. Te rugam sa incerci din nou.';
+    }
+}
+if(isset($_GET['success'])){
+  switch ($_GET['success']) {
+    case 'accountCreated':
+        $mess = 'Cont creat cu succes.Te rugam sa te logezi.';
+
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +45,10 @@
         <?php require_once "header.php"?>
     </div>
     <div class="container register">
-        <form class="formContactContainer register">
+        <form class="formContactContainer register" action="" method="post">
             <h2>Login in account!</h2>
-            <input class="inputBoxes" type="text" placeholder="E-mail..." name="mail">
-            <input class="inputBoxes" type="text" placeholder="Password..." name="password">
+            <input class="inputBoxes" class="form-control" type="text" placeholder="E-mail..." name="email">
+            <input class="inputBoxes" class="form-control" type="text" placeholder="Password..." name="password">
             <div class="links">
                 <a href="register.php">Register</a>
                 <a href="#">Forgot Password</a>
@@ -32,3 +59,28 @@
 </body>
 
 </html>
+
+<?php  
+    require_once 'popup-success.php'; 
+?>
+
+<?php
+require_once '../controllers/AccountController.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    AccountController::SignIn();
+}
+?>
+<?php
+require_once 'checkRoutes.php';
+$error = '';
+$mess = '';
+if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    switch ($error) {
+        case 'false':
+            $mess = 'Te rugam sa te logezi.';
+        case 'emailNotValid':
+            $mess = 'Email-ul sau parola sunt incorecte. Te rugam sa incerci din nou.';
+    }
+}
+?>

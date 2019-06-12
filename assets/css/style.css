@@ -155,11 +155,12 @@ ul {
 }
 
 .logo {
-  width: 250px;
+  width: 160px;
 }
 
 .logo.footer {
-  background: #fff;
+  /* background: #fff; */
+  padding-bottom: 30px;
 }
 .hide-mobile {
   display: none;
@@ -1090,4 +1091,8 @@ input[type="checkbox"]:checked:after {
   .top-bar-selector {
     width: 100%;
   }
+}
+
+.contact-pic1{
+  width:150px;
 }
