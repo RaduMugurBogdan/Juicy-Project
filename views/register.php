@@ -1,3 +1,26 @@
+<?php
+require_once 'checkRoutes.php';
+$error = '';
+$mess = '';
+if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    switch ($error) {
+
+        case 'emailIsAllreadyExist':
+            $mess = 'This email is already used. Please try with another one!';
+            break;
+
+        case 'passwordsDontMatch':
+            $mess = 'Passwords do not match!';
+            break;
+
+        case 'emptyFields':
+            $mess = 'Empty field detected! All the fields must be completed!';
+            break;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,24 +39,64 @@
 
 <body>
     <div class="container">
-        <?php require_once "header.php"?>
+        <?php require_once "header.php" ?>
     </div>
     <div class="container register">
-        <form class="formContactContainer register">
+        <form class="formContactContainer register" action="" method="post">
             <h2>Register!</h2>
-            <input class="inputBoxes" type="text" placeholder="Name..." name="name">
-            <input class="inputBoxes" type="text" placeholder="Password..." name="password">
-            <input class="inputBoxes" type="text" placeholder="Confirm password..." name="cpassword">
-            <input class="inputBoxes" type="text" placeholder="E-mail..." name="mail">
-            <input class="inputBoxes" type="text" placeholder="Phone number..." name="phone">
-            <textarea class="inputTextBoxArea" placeholder="Adresa" name="mesaj" cols="1" rows="3"></textarea>
+            <input class="inputBoxes" class="form-control" type="text" required placeholder="Name..." name="name">
+            <input class="inputBoxes" class="form-control" type="password" required placeholder="Password..." name="password">
+            <input class="inputBoxes" class="form-control" type="password" required placeholder="Confirm password..." name="confPass">
+            <input class="inputBoxes" class="form-control" type="email" required placeholder="E-mail..." name="email">
+            <input class="inputBoxes" class="form-control" type="text" required placeholder="Phone number..." name="phone">
+            <textarea class="inputTextBoxArea" placeholder="Adresa" name="address" cols="1" rows="3"></textarea>
             <div class="links">
-                <a href="login.php">Login</a>
-                <!-- <a href="#">Forgot Password</a> -->
+               <a href="login.php">Login</a>
             </div>
+            <?php
+            if (isset($_GET['error'])) {
+                $errorMsg = "";
+                $error = $_GET['error'];
+                switch ($error) {
+                    case 'emailIsAllreadyExist':
+                        $errorMsg = 'Email already used.';
+                        break;
+                    case 'passwordsDontMatch':
+                        $errorMsg = 'Passwords do not match.';
+                        break;
+                }
+                echo '
+                            <div class="errorContainer" id="errorContainerId">
+                                <span class="errorMessage">' . $errorMsg . '</span>
+                            </div>';
+            }
+            ?>
+            <?php
+            if (isset($_GET['success'])) {
+                $successMsg = "";
+                switch ($_GET['success']) {
+                    case 'accountCreated':
+                        $successMsg = 'Cont creat cu succes.Te rugam sa te logezi.';
+                        break;
+                }
+                echo '
+                            <div class="successContainer" id="successContainerId">
+                                <span class="successMessage">' . $successMsg . '</span>
+                            </div>';
+            }
+            ?>
             <button class="btn special blue" type="submit" name="trimite">Send</button>
         </form>
     </div>
 </body>
 
 </html>
+<?php
+require_once 'popup-success.php';
+?>
+<?php
+require_once '../controllers/AccountController.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    AccountController::SignUp();
+}
+?>

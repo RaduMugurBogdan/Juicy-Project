@@ -155,11 +155,12 @@ ul {
 }
 
 .logo {
-  width: 250px;
+  width: 160px;
 }
 
 .logo.footer {
-  background: #fff;
+  /* background: #fff; */
+  padding-bottom: 30px;
 }
 .hide-mobile {
   display: none;
@@ -788,7 +789,7 @@ h2 span {
 .container.register {
   font-family: "Roboto", sans-serif;
   margin-bottom: 100px;
-  width: 40%;
+  width: 100%;
 }
 
 .special-container {
@@ -919,7 +920,9 @@ input[type="checkbox"]:checked:after {
   margin: 20px;
 }
 .formContactContainer.register {
-  /* width:400px; */
+  min-width: 200px;
+  max-width: 500px;
+  margin: 0 auto;
   border: #00c2ff 1px solid;
 }
 
@@ -1090,4 +1093,20 @@ input[type="checkbox"]:checked:after {
   .top-bar-selector {
     width: 100%;
   }
+}
+
+.contact-pic1{
+  width:150px;
+}
+
+.errorContainer{
+  margin-bottom:5px;
+  margin-top:5px;
+  color:red;
+}
+
+.successContainer{
+  margin-bottom:5px;
+  margin-top:5px;
+  color:green;
 }

@@ -1,3 +1,12 @@
+<?php 
+require_once '../controllers/AccountController.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    AccountController::SignIn();
+}
+?>
+<?php
+require_once 'checkRoutes.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,17 +27,69 @@
         <?php require_once "header.php"?>
     </div>
     <div class="container register">
-        <form class="formContactContainer register">
+        <form class="formContactContainer register" action="" method="post">
             <h2>Login in account!</h2>
-            <input class="inputBoxes" type="text" placeholder="E-mail..." name="mail">
-            <input class="inputBoxes" type="text" placeholder="Password..." name="password">
+            <input class="inputBoxes" class="form-control" required type="email" placeholder="E-mail..." name="emailLogin">
+            <input class="inputBoxes" class="form-control" required type="password" placeholder="Password..." name="passwordLogin">
             <div class="links">
                 <a href="register.php">Register</a>
-                <a href="#">Forgot Password</a>
             </div>
+            <?php
+                if (isset($_GET['error'])) {
+                    $errorMsg = "";
+                    $error = $_GET['error'];
+                    switch ($error) {
+                        case 'false':
+                            $errorMsg = 'Trebuie sa te loghezi.';
+                            break;
+                        case 'emailNotValid':
+                            $errorMsg = 'Email-ul sau parola sunt incorecte. Te rugam sa incerci din nou.';
+                            break;
+                    }
+                    echo '
+                            <div class="errorContainer" id="errorContainerId">
+                                <span class="errorMessage">' . $errorMsg . '</span>
+                            </div>';
+                }
+                    ?>
+                    <?php
+                    if(isset($_GET['success'])){
+                        $successMsg = "";
+                        switch ($_GET['success']) {
+                          case 'accountCreated':
+                            $successMsg = 'Cont creat cu succes.Te rugam sa te logezi.';
+                            break;
+                      }
+                        echo '
+                            <div class="successContainer" id="successContainerId">
+                                <span class="successMessage">' . $successMsg . '</span>
+                            </div>';
+                    }
+                    ?>
             <button class="btn special blue" type="submit" name="send">Send</button>
         </form>
     </div>
 </body>
 
 </html>
+
+<?php
+require_once '../controllers/AccountController.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    AccountController::SignIn();
+}
+?>
+<?php
+require_once 'checkRoutes.php';
+$error = '';
+$mess = '';
+if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    switch ($error) {
+        case 'false':
+            $mess = 'Te rugam sa te logezi.';
+        case 'emailNotValid':
+            $mess = 'Email-ul sau parola sunt incorecte. Te rugam sa incerci din nou.';
+    }
+}
+?>
