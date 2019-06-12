@@ -1097,6 +1097,7 @@ input[type="checkbox"]:checked:after {
 
 .contact-pic1{
   width:150px;
+<<<<<<< HEAD
 }
 
 .errorContainer{
@@ -1109,4 +1110,6 @@ input[type="checkbox"]:checked:after {
   margin-bottom:5px;
   margin-top:5px;
   color:green;
+=======
+>>>>>>> 05022d103f9e4a30dca6ff185267b4a6ca9482f3
 }

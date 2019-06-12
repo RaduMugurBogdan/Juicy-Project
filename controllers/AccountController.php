@@ -30,7 +30,6 @@ class AccountController
         $str = htmlspecialchars($str);
         return $str;
     }
-
     public static function SignUp()
     {
         if (isset($_POST['email'])) {
