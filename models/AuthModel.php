@@ -56,15 +56,4 @@ class AuthModel
         return ($sql->rowcount() ? $sql->fetch(PDO::FETCH_ASSOC) : false);
     }
 
-
-    public function updateUserInfoFromDb($id,$firstName,$lastName,$email,$phone,$DOB,$country){
-        $sql = "UPDATE users SET firstName = :firstName, lastName = :lastName, email = :email, phone = :phone, DOB = :DOB, country = :country WHERE id_user = $id";
-        $query = $this->connection->prepare($sql);
-        $parameters = array(':firstName' => $firstName, ':lastName' => $lastName, ':email' => $email,':phone' => $phone, ':DOB' => $DOB, ':country' => $country);
-        if($query->execute($parameters)){
-            return true;
-        }else{
-            return false;
-        }
-    }
 }

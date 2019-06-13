@@ -16,7 +16,6 @@ class ShopController
         $Shop = new ShopModel();
         $result = $Shop->getItemById($id);
         return $result ? $result : false;
-    }
-
-    
+    }    
 }
+?>

@@ -62,24 +62,9 @@ class AccountController
 
     public static function getUserInfo($id)
     {
-        require_once '../models/AuthModel.php';
+        require_once '../models/AuthModel.php';@@
         $AuthModel = new AuthModel();
         return $AuthModel->getUserInfoFromDB($id);
     }
-    public static function updateUserInfo($id)
-    {
-        require_once '../models/AuthModel.php';
-        $firstName = AccountController::clearData($_POST['firstName']);
-        $lastName = AccountController::clearData($_POST['lastName']);
-        $email = AccountController::clearData($_POST['email']);
-        $phone = AccountController::clearData($_POST['phone']);
-        $DOB = AccountController::clearData($_POST['DOB']);
-        $country = AccountController::clearData($_POST['country']);
-        // echo $firstName.$lastName.$email.$phone.$DOB.$country;
-        $AuthModel = new AuthModel();
-        $res = $AuthModel->updateUserInfoFromDb($id, $firstName, $lastName, $email, $phone, $DOB, $country);
-        echo $res ?
-            header("Location:/Wews/views/user_profil.php?successfullUpdated=true")
-            : header("Location:/Wews/views/user_profil.php?succes=$res");
-    }
+   
 }

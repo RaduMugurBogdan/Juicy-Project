@@ -1,20 +1,77 @@
-<?php 
-    session_start();
-
-    // 1 1 1 2 1 2 3 4 
-
-    // foreach($_SESSION['cart'] as $itemId){
-    //     echo $itemId;
-    // }
-
-    $vals = array_count_values($_SESSION['cart']);
-echo 'No. of NON Duplicate Items: '.count($vals).'<br><br>';
-print_r($vals);
-foreach($vals as $key => $val) {
-    echo $key.$vals[$key]; // $key -> id item from db, $vals[$key] -> nr de apariti
-} 
+<?php require_once 'checkRoutes.php';
 
 
+if (isset($_GET['clear'])) {
+    $_SESSION['cart'] = array();
+}
 
-    
+$vals = $_SESSION['copyy'];
+
+if (isset($_GET['removeFromCart'])) {
+    $idToRemove = $_GET['removeFromCart'];
+    unset($vals[$idToRemove]);
+    $_SESSION['copyy'] = $vals;
+    header("Location:/Juicy-Project/views/shopCart.php");
+}
+
+if(isset($_GET['clear'])){
+    $vals = array();
+    $_SESSION['copyy'] = $vals;
+}
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/food-icons-rounded/110/Cocktail-512.png" />
+    <title>Shop cart</title>
+</head>
+
+<body>
+    <div class="container">
+        <?php
+        require_once "header.php" ?>
+        <div class="cart_container">
+            <?php
+            // $vals = $_SESSION['cart'];
+
+            foreach ($vals as $key => $val) {
+                require_once '../controllers/CartController.php';
+                $Cart = new CartController();
+                $items = $Cart->getItemById($key[$vals[$key]] . $key);
+                foreach ($items as $item) {
+                    $name = $item['product_name'];
+                    $discount = $item['discount'];
+                    $packSize = $item['pack_size'];
+                    $price = $item['price'];
+                    ?>
+                    <div class="cart_items">
+                        <span class="cart_style">Id: <?php echo $item['id_product']; ?></span>
+                        <span class="cart_style">Product name: <?php echo $name ?></span>
+                        <span class="cart_style">Discount: <?php echo $discount ?></span>
+                        <span class="cart_style">Pack size: <?php echo $packSize ?></span>
+                        <span class="cart_style">Quantity: <?php echo $vals[$key] ?></span>
+                        <span class="cart_style">Price: <?php echo $price ?></span>
+                        <a href="?removeFromCart=<?php echo $item['id_product']; ?>">
+                            <button class="btn special red"> - </button>
+                        </a>
+                    </div>
+                <?php
+            }
+        }
+
+        ?>
+            <div class="buttons_cart">
+                <button class="btn special red">Proceed to finish</button>
+                <a href="./shop.php"><button class="btn special red">Back to shop</button></a>
+                <a href="?clear=true"><button class="btn special red">Clear cart</button></a>
+            </div>
+        </div>

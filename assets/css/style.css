@@ -159,8 +159,12 @@ ul {
 }
 
 .logo.footer {
+<<<<<<< Updated upstream
   /* background: #fff; */
   padding-bottom: 30px;
+=======
+  background: #fff;
+>>>>>>> Stashed changes
 }
 .hide-mobile {
   display: none;
@@ -396,6 +400,7 @@ i.fas {
   width: auto;
   max-width: 60%;
 }
+<<<<<<< Updated upstream
 
 .top-search-container {
   width: auto;
@@ -455,6 +460,67 @@ i.fas {
   font-size: 20px;
 }
 
+=======
+
+.top-search-container {
+  width: auto;
+  display: flex;
+}
+.top-search-container input {
+  width: 300px;
+  border-right: none;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 90%;
+  background: #f1f1f1;
+}
+
+.top-search-container button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #00c2ff;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+.top-search-container button:active {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: white;
+  color: white;
+  font-size: 17px;
+  border: 1px solid red;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+.top-search-container button:hover {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #008eb9;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+.top-search-container button:active i {
+  color: black;
+  display: inline-block;
+}
+
+.top-bar-shop span {
+  font-size: 20px;
+}
+
+>>>>>>> Stashed changes
 .top-bar-selector {
   width: 150px;
   border-right: none;
@@ -789,7 +855,11 @@ h2 span {
 .container.register {
   font-family: "Roboto", sans-serif;
   margin-bottom: 100px;
+<<<<<<< Updated upstream
   width: 100%;
+=======
+  width: 40%;
+>>>>>>> Stashed changes
 }
 
 .special-container {
@@ -920,9 +990,13 @@ input[type="checkbox"]:checked:after {
   margin: 20px;
 }
 .formContactContainer.register {
+<<<<<<< Updated upstream
   min-width: 200px;
   max-width: 500px;
   margin: 0 auto;
+=======
+  /* width:400px; */
+>>>>>>> Stashed changes
   border: #00c2ff 1px solid;
 }
 
@@ -939,6 +1013,20 @@ input[type="checkbox"]:checked:after {
   padding: 0;
   box-sizing: border-box;
 }
+<<<<<<< Updated upstream
+
+.item-single-view .item-header{
+  max-height: none !important;
+  width: 100% !important;
+  margin:auto;
+}
+.item-single-view .item-logo{
+  width: 100% !important;
+  overflow: hidden;
+  margin: auto;
+}
+=======
+>>>>>>> Stashed changes
 
 /* responsive code*/
 
@@ -1013,10 +1101,10 @@ input[type="checkbox"]:checked:after {
   }
   .hide-desktop {
     display: none;
+    border-radius: 15px;
   }
   nav ul {
-    /* position: inherit;
-    width: auto; */
+    position: absolute;
     background: none;
     height: auto;
     display: flex;
@@ -1024,25 +1112,9 @@ input[type="checkbox"]:checked:after {
   nav ul li {
     float: left;
   }
-
-  .scroll {
-    width: 30px;
-    animation: move 2s infinite alternate;
-  }
-  @keyframes move {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(20px);
-    }
-  }
 }
-
 @media only screen and (min-width: 1600px) {
-  .server {
-    width: 40%;
-  }
+ 
   .container {
     width: 70%;
   }
@@ -1063,6 +1135,7 @@ input[type="checkbox"]:checked:after {
     width: 8%;
     margin-top: -4px;
   }
+ 
 }
 
 @media only screen and (max-width: 950px) {
@@ -1071,6 +1144,30 @@ input[type="checkbox"]:checked:after {
     top: 50px;
     right: 50px;
   }
+<<<<<<< Updated upstream
+  #nav.show-desktop{
+    position: absolute;
+    top:0;
+    right:0;
+  }
+  .active{
+    border-bottom: none;
+  }
+
+  nav li{
+    padding-bottom: 10px;
+  }
+
+  i.fas {
+    display:none;
+}
+
+  #exit.exit-btn.hide-desktop{
+    top:7%;
+    right:3px;
+  }
+=======
+>>>>>>> Stashed changes
 
   .filter-side {
     display: none;
@@ -1093,11 +1190,37 @@ input[type="checkbox"]:checked:after {
   .top-bar-selector {
     width: 100%;
   }
+<<<<<<< Updated upstream
+
+  .btn.special, .btn.normal {
+  padding: 5px 5px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.footer-container{
+  margin-top:150px;
+=======
+>>>>>>> Stashed changes
+}
+
+}
+
+@media (max-width:1080px) and (min-width:952px) {
+  nav ul li a {
+    padding: 1em 1em;
+  }
+}
+
+@media (max-width:1080px) and (min-width:735px) {
+  .cart_items{
+  display: flex;
+  flex-direction: column;
+  margin-bottom:5px;
+}
 }
 
 .contact-pic1{
   width:150px;
-<<<<<<< HEAD
 }
 
 .errorContainer{
@@ -1110,6 +1233,37 @@ input[type="checkbox"]:checked:after {
   margin-bottom:5px;
   margin-top:5px;
   color:green;
-=======
->>>>>>> 05022d103f9e4a30dca6ff185267b4a6ca9482f3
+}
+
+
+.cart_items .btn.special{
+  padding: 3px;
+}
+
+.car_intems span{
+ 
+}
+
+.cart_items{
+  border:1px solid red;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  justify-content: space-between;
+}
+
+/* .cart_items hr{
+  border: 1px solid red;
+  padding-bottom: 3px;
+   margin-top:10px; 
+} */
+
+.cart_container{
+  position: relative;
+  margin-top:10%  ;
+}
+
+.buttons_cart{
+  margin-top:5%;
 }
