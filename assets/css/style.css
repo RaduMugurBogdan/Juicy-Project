@@ -159,12 +159,8 @@ ul {
 }
 
 .logo.footer {
-<<<<<<< Updated upstream
   /* background: #fff; */
   padding-bottom: 30px;
-=======
-  background: #fff;
->>>>>>> Stashed changes
 }
 .hide-mobile {
   display: none;
@@ -400,7 +396,6 @@ i.fas {
   width: auto;
   max-width: 60%;
 }
-<<<<<<< Updated upstream
 
 .top-search-container {
   width: auto;
@@ -460,67 +455,6 @@ i.fas {
   font-size: 20px;
 }
 
-=======
-
-.top-search-container {
-  width: auto;
-  display: flex;
-}
-.top-search-container input {
-  width: 300px;
-  border-right: none;
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 90%;
-  background: #f1f1f1;
-}
-
-.top-search-container button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #00c2ff;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-.top-search-container button:active {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: white;
-  color: white;
-  font-size: 17px;
-  border: 1px solid red;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-.top-search-container button:hover {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #008eb9;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-
-.top-search-container button:active i {
-  color: black;
-  display: inline-block;
-}
-
-.top-bar-shop span {
-  font-size: 20px;
-}
-
->>>>>>> Stashed changes
 .top-bar-selector {
   width: 150px;
   border-right: none;
@@ -855,11 +789,7 @@ h2 span {
 .container.register {
   font-family: "Roboto", sans-serif;
   margin-bottom: 100px;
-<<<<<<< Updated upstream
   width: 100%;
-=======
-  width: 40%;
->>>>>>> Stashed changes
 }
 
 .special-container {
@@ -990,13 +920,9 @@ input[type="checkbox"]:checked:after {
   margin: 20px;
 }
 .formContactContainer.register {
-<<<<<<< Updated upstream
   min-width: 200px;
   max-width: 500px;
   margin: 0 auto;
-=======
-  /* width:400px; */
->>>>>>> Stashed changes
   border: #00c2ff 1px solid;
 }
 
@@ -1013,7 +939,6 @@ input[type="checkbox"]:checked:after {
   padding: 0;
   box-sizing: border-box;
 }
-<<<<<<< Updated upstream
 
 .item-single-view .item-header{
   max-height: none !important;
@@ -1025,8 +950,6 @@ input[type="checkbox"]:checked:after {
   overflow: hidden;
   margin: auto;
 }
-=======
->>>>>>> Stashed changes
 
 /* responsive code*/
 
@@ -1144,7 +1067,6 @@ input[type="checkbox"]:checked:after {
     top: 50px;
     right: 50px;
   }
-<<<<<<< Updated upstream
   #nav.show-desktop{
     position: absolute;
     top:0;
@@ -1166,8 +1088,6 @@ input[type="checkbox"]:checked:after {
     top:7%;
     right:3px;
   }
-=======
->>>>>>> Stashed changes
 
   .filter-side {
     display: none;
@@ -1190,7 +1110,6 @@ input[type="checkbox"]:checked:after {
   .top-bar-selector {
     width: 100%;
   }
-<<<<<<< Updated upstream
 
   .btn.special, .btn.normal {
   padding: 5px 5px;
@@ -1199,8 +1118,6 @@ input[type="checkbox"]:checked:after {
 }
 .footer-container{
   margin-top:150px;
-=======
->>>>>>> Stashed changes
 }
 
 }

@@ -67,7 +67,6 @@ if (isset($_GET['reset'])) {
 
 <body onload="loadNumberOfItems()">
     <div class="container">
-<<<<<<< Updated upstream
         <?php require_once "header.php" ?>
 
         <h1 class="aside-title">Having Fun Shopping</h1>
@@ -116,79 +115,15 @@ if (isset($_GET['reset'])) {
                             Natural drinks</label></div>
                 </aside>
                 <button class="btn special red" type="submit">Apply Filters</button>
-=======
-        <?php require_once "header.php"?>
-
-        <h1 class="aside-title">Having Fun at Shopping</h1>
-    </div>
-    <div class="container special-container effect1">
-        <div class="filter-side">
-            <form action="#" onsubmit="return false;">
-                <p class="aside-title">Apply filters</p>
-                <aside class="filter-container">
-
-                    <p class="aside-title">Beverages</p>
-
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drinks1" value="other"><label
-                            for="drinks1"> Carbonated drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drinks2" value="other"><label
-                            for="drinks2"> Natural drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drinks3" value="other"><label
-                            for="drinks3"> Natural drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drinks4" value="other"><label
-                            for="drinks4"> Other</label></div>
-                </aside>
-                <aside class="filter-container">
-                    <p class="aside-title">Category</p>
-
-
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink11" value="other"><label
-                            for="drink11"> Carbonated drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink21" value="other"><label
-                            for="drink21"> Natural drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink31" value="other"><label
-                            for="drink31"> Natural drinks</label></div>
-
-
-                </aside>
-                <aside class="filter-container">
-                    <p class="aside-title">Category</p>
-
-
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink111" value="other"><label
-                            for="drink111"> Carbonated drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink112" value="other"><label
-                            for="drink112"> Natural drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink113" value="other"><label
-                            for="drink113"> Natural drinks</label></div>
-                </aside>
-                <aside class="filter-container">
-                    <p class="aside-title">Category2</p>
-
-
-                    <div><input type="checkbox" name="radio-box" id="drink1111" value="other"><label for="drink1111">
-                            Carbonated drinks</label></div>
-                    <div><input type="checkbox" name="radio-box" id="drink1121" value="other"><label for="drink1121">
-                            Natural drinks</label></div>
-                    <div><input type="checkbox" name="radio-box" id="drink1131" value="other"><label for="drink1131">
-                            Natural drinks</label></div>
-                </aside>
-                <button class="btn special red">Apply Filters</button>
->>>>>>> Stashed changes
             </form>
         </div>
         <div class="main-view-shop">
             <div class="shop-container show-filters ">
-<<<<<<< Updated upstream
                 Number of products:<span class="sub-title" id="numberOfItems">0</span>
-=======
-                <span class="sub-title">Beverages(number)</span>
->>>>>>> Stashed changes
                 <div class="top-search-container">
                     <input type="text" placeholder="Search..">
                     <button type="button"><i class="fas fa-search"></i></button>
                 </div>
-<<<<<<< Updated upstream
                 Order:
                 <select class="top-bar-selector">
                     <option value="volvo">Ascendent</option>
@@ -205,33 +140,14 @@ if (isset($_GET['reset'])) {
             </div>
             <div class="shop-container view-list ">
                 <?php require_once 'view-items.php'; ?>
-=======
-                <select class="top-bar-selector">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="vw">VW</option>
-                    <option value="audi" selected>Audi</option>
-                    <option value="Order by">Order by</option>
-                </select>
-            </div>
-            <div class="shop-container other-filters ">
-
-            </div>
-            <div class="shop-container view-list ">
-                <?php require_once 'view-items.php';?>
->>>>>>> Stashed changes
             </div>
         </div>
 
 
     </div>
-<<<<<<< Updated upstream
     <?php require_once 'footer.php'; ?>
 
     <script src="../assets/js/main.js"></script>
-=======
-    <?php require_once 'footer.php';?>
->>>>>>> Stashed changes
 </body>
 
 </html>

@@ -27,19 +27,14 @@
 
     <div class="blue-container">
         <div class="container normalView">
-        <div class="listOfDiscountItems">
+            <div class="listOfDiscountItems">
                 <div class="title-discount-options">
                     <h1>List of items with discount</h1>
                 </div>
                 <div class="item-container">
                     <div class="item-header">
                         <div class="item-logo">
-<<<<<<< Updated upstream
                             <img src="https://cdn.shopify.com/s/files/1/1501/3776/products/IMG_9569_1024x1024.jpg?v=1532551009" alt="">
-=======
-                            <img src="https://cdn.shopify.com/s/files/1/1501/3776/products/IMG_9569_1024x1024.jpg?v=1532551009"
-                                alt="">
->>>>>>> Stashed changes
                         </div>
                         <div class="item-price-discount">
                             <span>-12%</span>
