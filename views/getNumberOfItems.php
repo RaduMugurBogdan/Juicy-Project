@@ -5,3 +5,4 @@ if (isset($_GET['total'])) {
     $Shop = new ShopController();
     echo $Shop->getItems($_SESSION['category'], $_SESSION['brand'], $_SESSION['sizePack']) !== false ?  count($Shop->getItems($_SESSION['category'], $_SESSION['brand'], $_SESSION['sizePack'])) : 0;
 }
+?>  

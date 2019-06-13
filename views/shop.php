@@ -70,7 +70,7 @@ if (isset($_GET['reset'])) {
     <div class="container">
         <?php require_once "header.php" ?>
 
-        <h1 class="aside-title">Having Fun at Shopping</h1>
+        <h1 class="aside-title">Having Fun Shopping</h1>
     </div>
     <div class="container special-container effect1">
         <div class="filter-side">
@@ -80,16 +80,28 @@ if (isset($_GET['reset'])) {
 
                     <p class="aside-title">Category</p>
 
-                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "carb" ? "checked" : "" ?> type="radio" name="category" id="drinks1" value="carb"><label for="drinks1"> Carbonated drinks</label></div>
-                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "nat" ? "checked" : "" ?> type="radio" name="category" id="drinks2" value="nat"><label for="drinks2"> Natural drinks</label></div>
-                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "acid" ? "checked" : "" ?> type="radio" name="category" id="drinks3" value="acid"><label for="drinks3">Acid</label></div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "carb" ? "checked" : "" ?>
+                            type="radio" name="category" id="drinks1" value="carb"><label for="drinks1"> Carbonated
+                            drinks</label></div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "nat" ? "checked" : "" ?>
+                            type="radio" name="category" id="drinks2" value="nat"><label for="drinks2"> Natural
+                            drinks</label></div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "acid" ? "checked" : "" ?>
+                            type="radio" name="category" id="drinks3" value="acid"><label for="drinks3">Acid</label>
+                    </div>
 
                 </aside>
                 <aside class="filter-container">
                     <p class="aside-title">Brand</p>
-                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat1" ? "checked" : "" ?> type="radio" name="brand" id="drink11" value="cat1"><label for="drink11"> Cat 1</label></div>
-                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat2" ? "checked" : "" ?> type="radio" name="brand" id="drink21" value="cayt2"><label for="drink21"> cat 2</label></div>
-                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat3" ? "checked" : "" ?> type="radio" name="brand" id="drink31" value="cat3"><label for="drink31"> Cat 3</label></div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat1" ? "checked" : "" ?>
+                            type="radio" name="brand" id="drink11" value="cat1"><label for="drink11"> Cat 1</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat2" ? "checked" : "" ?>
+                            type="radio" name="brand" id="drink21" value="cayt2"><label for="drink21"> cat 2</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat3" ? "checked" : "" ?>
+                            type="radio" name="brand" id="drink31" value="cat3"><label for="drink31"> Cat 3</label>
+                    </div>
                 </aside>
                 <!-- <aside class="filter-container">
                     <p class="aside-title">Category</p>
@@ -102,11 +114,14 @@ if (isset($_GET['reset'])) {
                 <aside class="filter-container">
                     <p class="aside-title">Size Pack</p>
 
-                    <div><input type="checkbox" name="sizePack[]" value="6" id="drink1111" value="other"><label for="drink1111">
+                    <div><input type="checkbox" name="sizePack[]" value="6" id="drink1111" value="other"><label
+                            for="drink1111">
                             Carbonated drinks</label></div>
-                    <div><input type="checkbox" name="sizePack[]" value="12" id="drink1121" value="other"><label for="drink1121">
+                    <div><input type="checkbox" name="sizePack[]" value="12" id="drink1121" value="other"><label
+                            for="drink1121">
                             Natural drinks</label></div>
-                    <div><input type="checkbox" name="sizePack[]" value="18" id="drink1131" value="other"><label for="drink1131">
+                    <div><input type="checkbox" name="sizePack[]" value="18" id="drink1131" value="other"><label
+                            for="drink1131">
                             Natural drinks</label></div>
                 </aside>
                 <button class="btn special red" type="submit">Apply Filters</button>
@@ -114,7 +129,7 @@ if (isset($_GET['reset'])) {
         </div>
         <div class="main-view-shop">
             <div class="shop-container show-filters ">
-                Beverages(<span class="sub-title" id="numberOfItems">0</span>)
+                Number of products:<span class="sub-title" id="numberOfItems">0</span>
                 <div class="top-search-container">
                     <input type="text" placeholder="Search..">
                     <button type="button"><i class="fas fa-search"></i></button>
@@ -131,11 +146,7 @@ if (isset($_GET['reset'])) {
                 <ul>
                     <li><?php echo $_SESSION['category'] ? $_SESSION['category'] : "" ?></li>
                     <li><?php echo $_SESSION['brand'] ? $_SESSION['brand'] : "" ?></li>
-                    <li>asd</li>
-                    <li>asd</li>
-                    <?php if ($_SESSION['category'] || $_SESSION['brand']) echo '
-<li><a  href="?reset=all">reset</a></li>
-                    ';  ?>
+                    <?php if ($_SESSION['category'] || $_SESSION['brand']) echo '<li><a  href="?reset=all">reset</a></li>';  ?>
 
                 </ul>
             </div>

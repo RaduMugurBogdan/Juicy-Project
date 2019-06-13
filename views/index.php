@@ -15,7 +15,9 @@
 
 <body>
     <div class="container">
-        <?php require_once "header.php" ?>
+        <?php 
+        session_start();
+        require_once "header.php" ?>
         <section>
             <img src="http://www.juiceworld.ae/images/home/slider/img-1.png" alt="server graphic" class="server">
             <h1>Magazin de bauturi cu livrare la tine acasa</h1>
@@ -187,7 +189,7 @@
                 </div>
             </div>
             <div class="see-all-item">
-                <a href="views\shop.php">
+                <a href="./shop.php">
                     <button class="btn normal red">
                         See all products
                     </button>

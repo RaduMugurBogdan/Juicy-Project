@@ -94,7 +94,11 @@ class ShopModel
             );
         }
         return $resultItems;
+    }
 
+    public function searchItemByName($itemName=""){
+        $sql= "SELECT * from product_details WHERE product_name like %'$itemName'%";
+        
 
     }
 }

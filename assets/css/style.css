@@ -1013,10 +1013,10 @@ input[type="checkbox"]:checked:after {
   }
   .hide-desktop {
     display: none;
+    border-radius: 15px;
   }
   nav ul {
-    /* position: inherit;
-    width: auto; */
+    position: absolute;
     background: none;
     height: auto;
     display: flex;
@@ -1024,25 +1024,9 @@ input[type="checkbox"]:checked:after {
   nav ul li {
     float: left;
   }
-
-  .scroll {
-    width: 30px;
-    animation: move 2s infinite alternate;
-  }
-  @keyframes move {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(20px);
-    }
-  }
 }
-
 @media only screen and (min-width: 1600px) {
-  .server {
-    width: 40%;
-  }
+ 
   .container {
     width: 70%;
   }
@@ -1063,6 +1047,7 @@ input[type="checkbox"]:checked:after {
     width: 8%;
     margin-top: -4px;
   }
+ 
 }
 
 @media only screen and (max-width: 950px) {
@@ -1070,6 +1055,27 @@ input[type="checkbox"]:checked:after {
     position: absolute;
     top: 50px;
     right: 50px;
+  }
+  #nav.show-desktop{
+    position: absolute;
+    top:0;
+    right:0;
+  }
+  .active{
+    border-bottom: none;
+  }
+
+  nav li{
+    padding-bottom: 10px;
+  }
+
+  i.fas {
+    display:none;
+}
+
+  #exit.exit-btn.hide-desktop{
+    top:7%;
+    right:3px;
   }
 
   .filter-side {
@@ -1093,11 +1099,26 @@ input[type="checkbox"]:checked:after {
   .top-bar-selector {
     width: 100%;
   }
+
+  .btn.special, .btn.normal {
+  padding: 5px 5px;
+  font-size: 20px;
+  border-radius: 10px;
 }
+.footer-container{
+  margin-top:150px;
+}
+}
+
+@media (max-width:1080px) and (min-width:952px) {
+  nav ul li a {
+    padding: 1em 1em;
+  }
+}
+
 
 .contact-pic1{
   width:150px;
-<<<<<<< HEAD
 }
 
 .errorContainer{
@@ -1110,6 +1131,4 @@ input[type="checkbox"]:checked:after {
   margin-bottom:5px;
   margin-top:5px;
   color:green;
-=======
->>>>>>> 05022d103f9e4a30dca6ff185267b4a6ca9482f3
 }

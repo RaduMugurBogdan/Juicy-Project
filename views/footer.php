@@ -6,8 +6,8 @@
             </a>
             <p class="address">Best Place to buy<br> JUICY</p>
             <ul class="footer-links">
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Account</a></li>
+                <li><a href="./shop.php">Shop</a></li>
+                <li><a href="./login.php">Account</a></li>
             </ul>
         </div>
     </div>
