@@ -73,7 +73,7 @@ require_once 'checkRoutes.php';
 
 </html>
 
-<?php
+<!-- <?php
 require_once '../controllers/AccountController.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     AccountController::SignIn();
@@ -92,4 +92,4 @@ if (isset($_GET['error'])) {
             $mess = 'Email-ul sau parola sunt incorecte. Te rugam sa incerci din nou.';
     }
 }
-?>
+?> -->

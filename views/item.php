@@ -1,8 +1,16 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['copyy'])) {
+    $_SESSION['copyy'] = array();
+}
+
 if (isset($_GET['addToCart'])) {
-    array_push($_SESSION['cart'], $_GET['addToCart']);
-    header("Location:/Juicy-Project/views/shop.php");
+    if (isset($_SESSION['copyy'][$_GET['addToCart']])) {
+        $_SESSION['copyy'][$_GET['addToCart']] = $_SESSION['copyy'][$_GET['addToCart']] + 1;
+    } else {
+        $_SESSION['copyy'][$_GET['addToCart']] = 1;
+    }
 }
 ?>
 
@@ -63,7 +71,7 @@ if (isset($_GET['addToCart'])) {
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem perspiciatis sequi consectetur consequatur, laudantium aliquid ab quisquam, sed quasi non cum. Qui vel porro atque est enim tempore dignissimos distinctio.
                             </div>
                             <div class="item-goto">
-                                <a href="?addToCart=<?php echo $item['id_product']; ?>">
+                                <a href="?addToCart=<?php echo $item['id_product']."&id=".$item['id_product']; ?>">
                                     <button class="btn special red">
                                         + cart
                                     </button>

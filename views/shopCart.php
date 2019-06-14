@@ -14,9 +14,14 @@ if (isset($_GET['removeFromCart'])) {
     header("Location:/Juicy-Project/views/shopCart.php");
 }
 
+$msgNoItems;
+if($vals == NULL)
+$msgNoItems = "No items in the cart yet. Go shopping! :)";
+
 if(isset($_GET['clear'])){
     $vals = array();
     $_SESSION['copyy'] = $vals;
+  
 }
 
 ?>
@@ -36,13 +41,15 @@ if(isset($_GET['clear'])){
 </head>
 
 <body>
-    <div class="container">
+    <div class="container cart">
         <?php
         require_once "header.php" ?>
         <div class="cart_container">
             <?php
-            // $vals = $_SESSION['cart'];
-
+            if($vals == NULL){
+                global $msgNoItems;
+                echo $msgNoItems;
+            }
             foreach ($vals as $key => $val) {
                 require_once '../controllers/CartController.php';
                 $Cart = new CartController();
@@ -53,18 +60,18 @@ if(isset($_GET['clear'])){
                     $packSize = $item['pack_size'];
                     $price = $item['price'];
                     ?>
-                    <div class="cart_items">
-                        <span class="cart_style">Id: <?php echo $item['id_product']; ?></span>
-                        <span class="cart_style">Product name: <?php echo $name ?></span>
-                        <span class="cart_style">Discount: <?php echo $discount ?></span>
-                        <span class="cart_style">Pack size: <?php echo $packSize ?></span>
-                        <span class="cart_style">Quantity: <?php echo $vals[$key] ?></span>
-                        <span class="cart_style">Price: <?php echo $price ?></span>
-                        <a href="?removeFromCart=<?php echo $item['id_product']; ?>">
-                            <button class="btn special red"> - </button>
-                        </a>
-                    </div>
-                <?php
+            <div class="cart_items">
+                <span class="cart_style" id="hide1">Id: <?php echo $item['id_product']; ?></span>
+                <span class="cart_style">Product name: <?php echo $name ?></span>
+                <span class="cart_style" id="hide2">Discount: <?php echo $discount ?></span>
+                <span class="cart_style" id="hide3">Pack size: <?php echo $packSize ?></span>
+                <span class="cart_style">Quantity: <?php echo $vals[$key] ?></span>
+                <span class="cart_style">Price: <?php echo $price ?></span>
+                <a href="?removeFromCart=<?php echo $item['id_product']; ?>">
+                    <button class="btn special red far fa-trash-alt">  </button>
+                </a>
+            </div>
+            <?php
             }
         }
 

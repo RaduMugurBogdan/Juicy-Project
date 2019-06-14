@@ -304,8 +304,6 @@ a {
 h2.title {
   font-size: 35px;
   color: rgb(65, 17, 17);
-  line-break: 1.7;
-  letter-spacing: 0.5;
   margin: 30px;
   display: block;
   padding: 20px;
@@ -412,58 +410,24 @@ i.fas {
   background: #f1f1f1;
 }
 
-.top-search-container button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #00c2ff;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-.top-search-container button:active {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: white;
-  color: white;
-  font-size: 17px;
-  border: 1px solid red;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-.top-search-container button:hover {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #008eb9;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-
-.top-search-container button:active i {
-  color: black;
-  display: inline-block;
-}
+button {
+    background:none;
+    border:none;
+    font-size:1em;
+    color:blue;
+  }
 
 .top-bar-shop span {
   font-size: 20px;
 }
 
 .top-bar-selector {
-  width: 150px;
-  border-right: none;
-  padding: 6px;
-  font-size: 15px;
-  border: 1px solid grey;
-  float: left;
-  width: 30%;
-  background: #f1f1f1;
+    border-right: none;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    background: #f1f1f1;
 }
 .listOfDiscountItems {
   display: flex;
@@ -615,7 +579,7 @@ i.fas {
   font-size: 15px;
   font-weight: 600;
   padding: 10px;
-  letter-spacing: 0.5;
+  /* letter-spacing: 0.5; */
 }
 .inputTextBoxArea {
   font-family: "Roboto", sans-serif;
@@ -687,7 +651,7 @@ h2 span {
   width: 12vw;
   white-space: nowrap;
   height: 1.5em;
-  font-display: bold;
+  font-weight: 700;
   color: white;
   font-size: 1.2em;
   margin-top: 5px;
@@ -702,7 +666,7 @@ h2 span {
 .submit {
   height: 1.5em;
   width: 12vw;
-  font-display: bold;
+  font-weight: 700;
   color: white;
   font-size: 1.2em;
   background-color: rgb(139, 39, 39);
@@ -951,6 +915,69 @@ input[type="checkbox"]:checked:after {
   margin: auto;
 }
 
+.cart_items .btn.special{
+  padding: 3px;
+  border-left: 1px solid red;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-radius:0px;
+}
+
+
+.contact-pic1{
+  width:150px;
+}
+.contact-pic2{
+  width:115px;
+  transform: translateX(6px);
+}
+
+.errorContainer{
+  margin-bottom:5px;
+  margin-top:5px;
+  color:red;
+}
+
+.successContainer{
+  margin-bottom:5px;
+  margin-top:5px;
+  color:green;
+}
+
+
+.cart_items .btn.special{
+  padding: 3px;
+}
+
+.car_intems span{
+ 
+}
+
+.cart_items{
+  border:1px solid red;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  justify-content: space-between;
+}
+
+/* .cart_items hr{
+  border: 1px solid red;
+  padding-bottom: 3px;
+   margin-top:10px; 
+} */
+
+.cart_container{
+  position: relative;
+  margin-top:10%  ;
+}
+
+.buttons_cart{
+  margin-top:5%;
+}
+
 /* responsive code*/
 
 @media only screen and (min-width: 650px) {
@@ -958,7 +985,7 @@ input[type="checkbox"]:checked:after {
     width: 100% !important;
   }
   .server {
-    width: 50%;
+    width: 45%;
   }
   h1 {
     font-size: 3em;
@@ -1080,9 +1107,10 @@ input[type="checkbox"]:checked:after {
     padding-bottom: 10px;
   }
 
-  i.fas {
+  li i.fas {
     display:none;
-}
+  }
+
 
   #exit.exit-btn.hide-desktop{
     top:7%;
@@ -1103,6 +1131,8 @@ input[type="checkbox"]:checked:after {
     width: 100%;
     margin-bottom: 10px;
   }
+
+
   .sub-title {
     display: block;
     margin-bottom: 10px;
@@ -1116,11 +1146,37 @@ input[type="checkbox"]:checked:after {
   font-size: 20px;
   border-radius: 10px;
 }
+
 .footer-container{
   margin-top:150px;
 }
 
+#hide1{
+  display: none;
 }
+
+#hide2{
+  display: none;
+}
+
+#hide3{
+  display: none;
+}
+
+.cart_items {
+  width:100%;
+}
+
+.container.cart{
+  width:100%;
+}
+.cart_items{
+  display: flex;
+  flex-direction: column;
+}
+
+}
+
 
 @media (max-width:1080px) and (min-width:952px) {
   nav ul li a {
@@ -1128,59 +1184,10 @@ input[type="checkbox"]:checked:after {
   }
 }
 
-@media (max-width:1080px) and (min-width:735px) {
+/* @media (max-width:1080px) and (min-width:735px) {
   .cart_items{
   display: flex;
   flex-direction: column;
   margin-bottom:5px;
 }
-}
-
-.contact-pic1{
-  width:150px;
-}
-
-.errorContainer{
-  margin-bottom:5px;
-  margin-top:5px;
-  color:red;
-}
-
-.successContainer{
-  margin-bottom:5px;
-  margin-top:5px;
-  color:green;
-}
-
-
-.cart_items .btn.special{
-  padding: 3px;
-}
-
-.car_intems span{
- 
-}
-
-.cart_items{
-  border:1px solid red;
-  width: 80%;
-  margin-left:auto;
-  margin-right:auto;
-  display:flex;
-  justify-content: space-between;
-}
-
-/* .cart_items hr{
-  border: 1px solid red;
-  padding-bottom: 3px;
-   margin-top:10px; 
 } */
-
-.cart_container{
-  position: relative;
-  margin-top:10%  ;
-}
-
-.buttons_cart{
-  margin-top:5%;
-}

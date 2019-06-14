@@ -48,7 +48,7 @@ class ShopModel
         return $this->defaultQueryModel($sql);
     }
 
-    public function getItems($cat = "", $brand = "", $sizePack = "")
+    public function getItems($cat = "", $brand = "", $sizePack = "",$order="")
     {
         $sql = "SELECT * from product_details ";
 
@@ -73,9 +73,30 @@ class ShopModel
         }else if($brand !== ""){
             $sql .= " WHERE brand = '$brand'";
         }
+
+        if($order!=NULL)
+        {
+            if($order == "nameAsc" || $order == "default"){
+                $sql .= "order by product_name asc";
+            }else
+            if($order == "nameDesc"){
+                $sql .= "order by product_name desc";
+            }else
+            if($order == "discount"){
+                $sql .= "order by discount desc";
+            }else
+            if($order == "priceAsc"){
+                $sql .= "order by price asc";
+            }else
+            if($order == "priceDesc"){
+                $sql .= "order by price desc";
+            }else
+            if($order == "packSize"){
+                $sql .= "order by pack_size desc";
+            }
+        }
         
         $resultItems = array();
-
         $sql = $this->connection->prepare($sql);
         $sql->execute();
         foreach ($sql->fetchAll() as $result) {
@@ -97,8 +118,8 @@ class ShopModel
     }
 
     public function searchItemByName($itemName=""){
-        $sql= "SELECT * from product_details WHERE product_name like %'$itemName'%";
-        //TBC
-
+        $aux = "'%".$itemName."%'";
+        $sql= "SELECT * FROM product_details WHERE product_name LIKE $aux";
+        return $this->defaultQueryModel($sql);
     }
 }

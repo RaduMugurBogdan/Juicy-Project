@@ -3,8 +3,7 @@
     $path = $_SERVER['REQUEST_URI'];
     $dirs = explode('/', $path);
     $last_dir = $dirs[count($dirs) - 1];
-
-    $totalItemsInCart =   count($_SESSION['copyy']) 
+    $totalItemsInCart = count($_SESSION['copyy']);
     ?>
     <div class="logo-body">
         <img src="../assets/images/JuicyLogoColorBlack.png" alt="23andfour logo" class="logo">

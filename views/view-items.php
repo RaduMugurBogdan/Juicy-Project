@@ -2,7 +2,14 @@
     <?php
     require_once '../controllers/ShopController.php';
     $Shop = new ShopController();
-    $items = $Shop->getItems($_SESSION['category'], $_SESSION['brand'], $_SESSION['sizePack']);
+    $items;
+    if(isset($_SESSION['itemByName']))
+    {
+        $items = $Shop->searchItemByName($_SESSION['itemByName']);
+        unset($_SESSION['itemByName']);
+    }else{
+    $items = $Shop->getItems($_SESSION['category'], $_SESSION['brand'], $_SESSION['sizePack'], $_SESSION['order']);
+    }
     if ($items !== false) {
         foreach ($items as $item) {
             ?>
@@ -40,7 +47,7 @@
                 </div>
             </div>
         <?php
-    }
+    }  
 } else {
     ?>
         <div class="msg erro">No items</div>

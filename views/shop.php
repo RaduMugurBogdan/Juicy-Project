@@ -7,6 +7,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['brand'] = isset($_POST['brand']) ? $_POST['brand'] : "";
         $_SESSION['sizePack'] = isset($_POST['sizePack']) ? $_POST['sizePack'] : "";
     }
+        
+    if(isset($_POST['itemNameForSearch'])){
+        $_SESSION['itemByName'] = isset($_POST['itemNameForSearch']) ? $_POST['itemNameForSearch'] : "";
+    }
+
+    if(isset($_POST['order'])){
+        $_SESSION['order'] = isset($_POST['order']) ? $_POST['order'] : "";
+    }
+
 } else {
     if (!isset($_SESSION['category'])) {
         $_SESSION['category'] = "";
@@ -19,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 }
+
 if (!isset($_SESSION['copyy'])) {
     $_SESSION['copyy'] = array();
 }
@@ -79,40 +89,64 @@ if (isset($_GET['reset'])) {
 
                     <p class="aside-title">Category</p>
 
-                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "carb" ? "checked" : "" ?> type="radio" name="category" id="drinks1" value="carb"><label for="drinks1"> Carbonated
+                    <div class="choiceApply"><input
+                            <?php echo $_SESSION['category'] == "carbogazed drink" ? "checked" : "" ?> type="radio"
+                            name="category" id="carbo drink" value="carbo drink"><label for="carbo drink"> Carbonated
                             drinks</label></div>
-                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "nat" ? "checked" : "" ?> type="radio" name="category" id="drinks2" value="nat"><label for="drinks2"> Natural
+                    <div class="choiceApply"><input
+                            <?php echo $_SESSION['category'] == "natural drink" ? "checked" : "" ?> type="radio"
+                            name="category" id="natural drink" value="natural drink"><label for="natural drink"> Natural
                             drinks</label></div>
-                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "acid" ? "checked" : "" ?> type="radio" name="category" id="drinks3" value="acid"><label for="drinks3">Acid</label>
+                    <div class="choiceApply"><input
+                            <?php echo $_SESSION['category'] == "energy drink" ? "checked" : "" ?> type="radio"
+                            name="category" id="energy drink" value="energy drink"><label for="energy drink"> Energy
+                            drinks</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['category'] == "beer" ? "checked" : "" ?>
+                            type="radio" name="category" id="beer" value="beer"><label for="beer"> Beer</label>
                     </div>
 
                 </aside>
                 <aside class="filter-container">
                     <p class="aside-title">Brand</p>
-                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat1" ? "checked" : "" ?> type="radio" name="brand" id="drink11" value="cat1"><label for="drink11"> Cat 1</label>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cola" ? "checked" : "" ?>
+                            type="radio" name="brand" id="cola" value="cola"><label for="cola"> Cola</label>
                     </div>
-                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat2" ? "checked" : "" ?> type="radio" name="brand" id="drink21" value="cayt2"><label for="drink21"> cat 2</label>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "fanta" ? "checked" : "" ?>
+                            type="radio" name="brand" id="fanta" value="fanta"><label for="fanta"> Fanta</label>
                     </div>
-                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "cat3" ? "checked" : "" ?> type="radio" name="brand" id="drink31" value="cat3"><label for="drink31"> Cat 3</label>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "sprite" ? "checked" : "" ?>
+                            type="radio" name="brand" id="sprite" value="sprite"><label for="sprite"> Sprite</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "redbull" ? "checked" : "" ?>
+                            type="radio" name="brand" id="redbull" value="redbull"><label for="redbull"> Redbull</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "hell" ? "checked" : "" ?>
+                            type="radio" name="brand" id="hell" value="hell"><label for="hell"> Hell</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "giusto" ? "checked" : "" ?>
+                            type="radio" name="brand" id="giusto" value="giusto"><label for="giusto"> Giusto</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "burn" ? "checked" : "" ?>
+                            type="radio" name="brand" id="burn" value="burn"><label for="burn"> Burn</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "prigat" ? "checked" : "" ?>
+                            type="radio" name="brand" id="prigat" value="prigat"><label for="prigat"> Prigat</label>
+                    </div>
+                    <div class="choiceApply"><input <?php echo $_SESSION['brand'] == "Tuborg" ? "checked" : "" ?>
+                            type="radio" name="brand" id="tuborg" value="tuborg"><label for="tuborg"> Tuborg</label>
                     </div>
                 </aside>
-                <!-- <aside class="filter-container">
-                    <p class="aside-title">Category</p>
 
-
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink111" value="other"><label for="drink111"> Carbonated drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink112" value="other"><label for="drink112"> Natural drinks</label></div>
-                    <div class="choiceApply"><input type="radio" name="radio-box" id="drink113" value="other"><label for="drink113"> Natural drinks</label></div>
-                </aside> -->
                 <aside class="filter-container">
                     <p class="aside-title">Size Pack</p>
 
-                    <div><input type="checkbox" name="sizePack[]" value="6" id="drink1111" value="other"><label for="drink1111">
-                            Carbonated drinks</label></div>
-                    <div><input type="checkbox" name="sizePack[]" value="12" id="drink1121" value="other"><label for="drink1121">
-                            Natural drinks</label></div>
-                    <div><input type="checkbox" name="sizePack[]" value="18" id="drink1131" value="other"><label for="drink1131">
-                            Natural drinks</label></div>
+                    <div><input type="checkbox" name="sizePack[]" value="18" id="single"><label for="drink1131">
+                            1 pack</label></div>
+                    <div><input type="checkbox" name="sizePack[]" value="6" id="6pack"><label for="drink1111">
+                            6 pack</label></div>
+                    <div><input type="checkbox" name="sizePack[]" value="48" id="48pack"><label for="drink1121">
+                            48 pack</label></div>
                 </aside>
                 <button class="btn special red" type="submit">Apply Filters</button>
             </form>
@@ -120,15 +154,27 @@ if (isset($_GET['reset'])) {
         <div class="main-view-shop">
             <div class="shop-container show-filters ">
                 Number of products:<span class="sub-title" id="numberOfItems">0</span>
-                <div class="top-search-container">
-                    <input type="text" placeholder="Search..">
-                    <button type="button"><i class="fas fa-search"></i></button>
-                </div>
-                Order:
-                <select class="top-bar-selector">
-                    <option value="volvo">Ascendent</option>
-                    <option value="saab">Descendent</option>
-                </select>
+                <form class="search-container" action method="post">
+                    <div class="top-search-container">
+                        <input type="text" placeholder="Search.." class="formaction" name="itemNameForSearch">
+                        <button type="submit"><i class="btn special red fas fa-search"></i></button>
+                    </div>
+                </form>
+                Order by:
+                <form class="search-container" action method="post">
+                    <div class="top-search-container">
+                        <select class="top-bar-selector" required value="1" name="order">
+                            <option value="default">whatever you want</option>
+                            <option value="nameAsc">Name ascendent</option>
+                            <option value="nameDesc">Name descendent</option>
+                            <option value="discount">Discount</option>
+                            <option value="priceAsc">Price ascendent</option>
+                            <option value="priceDesc">Price descendent</option>
+                            <option value="packSize">Pack size</option>
+                        </select>
+                        <button type="submit"><i class="btn special red fas fa-sort-amount-up"></i></button>
+                    </div>
+                </form>
             </div>
             <div class="shop-container other-filters ">
                 <ul>

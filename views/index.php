@@ -19,9 +19,9 @@
         session_start();
         require_once "header.php" ?>
         <section>
-            <img src="http://www.juiceworld.ae/images/home/slider/img-1.png" alt="server graphic" class="server">
-            <h1>Magazin de bauturi cu livrare la tine acasa</h1>
-            <p class="subhead">Nu gasesti preturi mai mici nicaieri!</p>
+            <img src="../assets/images/untitled.png" alt="server graphic" class="server">
+            <h1>Fresh juices shop with the fastest home delivery</h1>
+            <p class="subhead">You won't find better prices!</p>
         </section>
     </div>
 
@@ -31,191 +31,72 @@
                 <div class="title-discount-options">
                     <h1>List of items with discount</h1>
                 </div>
-                <div class="item-container">
-                    <div class="item-header">
-                        <div class="item-logo">
-                            <img src="https://cdn.shopify.com/s/files/1/1501/3776/products/IMG_9569_1024x1024.jpg?v=1532551009" alt="">
+                <?php
+                require_once '../controllers/IndexController.php';
+                $Index = new IndexController();
+                $items = $Index->getFirstDiscount();
+                if ($items !== false) {
+                    foreach ($items as $item) {
+                    ?>
+                    <div class="item-container">
+                        <div class="item-header">
+                            <div class="item-logo">
+                                <img src=<?php echo $item['url']; ?> alt="">
+                            </div>
+                            <div class="item-price-discount">
+                                <span>-<?php echo $item['discount']; ?>%</span>
+                            </div>
                         </div>
-                        <div class="item-price-discount">
-                            <span>-12%</span>
-                        </div>
-                    </div>
-                    <div class="item-body">
-                        <div class="item-title">
-                            Minute Main Pupy
-                        </div>
-                        <div class="item-subtitle">
-                            Suc natural
-                        </div>
-                        <div class="item-price">
-                            123.69 <span>RON</span>
-                        </div>
-                        <div class="item-goto">
-                            <button class="btn special red">
-                                Vezi produs
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container">
-                    <div class="item-header">
-                        <div class="item-logo">
-                            <img src="https://en.cocacola.co.id/content/dam/journey/id/en/private/brands/598x336/MMP-Orange-598x336.png" alt="">
-                        </div>
-                        <div class="item-price-discount">
-                            <span>-12%</span>
-                        </div>
-                    </div>
-                    <div class="item-body">
-                        <div class="item-title">
-                            Minute Main Pupy
-                        </div>
-                        <div class="item-subtitle">
-                            Suc natural
-                        </div>
-                        <div class="item-price">
-                            123.69 <span>RON</span>
-                        </div>
-                        <div class="item-goto">
-                            <button class="btn special red">
-                                Vezi produs
-                            </button>
+                        <div class="item-body">
+                            <div class="item-title">
+                                <?php echo $item['product_name']; ?>
+                            </div>
+                            <div class="item-subtitle">
+                                <?php echo $item['drink_type']; ?>
+                            </div>
+                            <div class="item-price">
+                                <?php echo $item['price']; ?><span>RON</span>
+                            </div>
+                            <div class="item-goto">
+                                <a href="item.php?id=<?php echo $item['id_product']; ?>">
+                                    <button class="btn special red">
+                                        Vezi produs
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item-container">
-                    <div class="item-header">
-                        <div class="item-logo">
-                            <img src="https://en.cocacola.co.id/content/dam/journey/id/en/private/brands/598x336/MMP-Orange-598x336.png" alt="">
-                        </div>
-                        <div class="item-price-discount">
-                            <span>-12%</span>
-                        </div>
-                    </div>
-                    <div class="item-body">
-                        <div class="item-title">
-                            Minute Main Pupy
-                        </div>
-                        <div class="item-subtitle">
-                            Suc natural
-                        </div>
-                        <div class="item-price">
-                            123.69 <span>RON</span>
-                        </div>
-                        <div class="item-goto">
-                            <button class="btn special red">
-                                Vezi produs
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container">
-                    <div class="item-header">
-                        <div class="item-logo">
-                            <img src="https://en.cocacola.co.id/content/dam/journey/id/en/private/brands/598x336/MMP-Orange-598x336.png" alt="">
-                        </div>
-                        <div class="item-price-discount">
-                            <span>-12%</span>
-                        </div>
-                    </div>
-                    <div class="item-body">
-                        <div class="item-title">
-                            Minute Main Pupy
-                        </div>
-                        <div class="item-subtitle">
-                            Suc natural
-                        </div>
-                        <div class="item-price">
-                            123.69 <span>RON</span>
-                        </div>
-                        <div class="item-goto">
-                            <button class="btn special red">
-                                Vezi produs
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container">
-                    <div class="item-header">
-                        <div class="item-logo">
-                            <img src="https://en.cocacola.co.id/content/dam/journey/id/en/private/brands/598x336/MMP-Orange-598x336.png" alt="">
-                        </div>
-                        <div class="item-price-discount">
-                            <span>-12%</span>
-                        </div>
-                    </div>
-                    <div class="item-body">
-                        <div class="item-title">
-                            Minute Main Pupy
-                        </div>
-                        <div class="item-subtitle">
-                            Suc natural
-                        </div>
-                        <div class="item-price">
-                            123.69 <span>RON</span>
-                        </div>
-                        <div class="item-goto">
-                            <button class="btn special red">
-                                Vezi produs
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-container">
-                    <div class="item-header">
-                        <div class="item-logo">
-                            <img src="https://en.cocacola.co.id/content/dam/journey/id/en/private/brands/598x336/MMP-Orange-598x336.png" alt="">
-                        </div>
-                        <div class="item-price-discount">
-                            <span>-12%</span>
-                        </div>
-                    </div>
-                    <div class="item-body">
-                        <div class="item-title">
-                            Minute Main Pupy
-                        </div>
-                        <div class="item-subtitle">
-                            Suc natural
-                        </div>
-                        <div class="item-price">
-                            123.69 <span>RON</span>
-                        </div>
-                        <div class="item-goto">
-                            <button class="btn special red">
-                                Vezi produs
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="see-all-item">
-                <a href="./shop.php">
-                    <button class="btn normal red">
-                        See all products
-                    </button>
-                </a>
+                    <?php
+                    }
+            } else {
+                ?>
+                <div class="msg erro">No items</div>
+                <?php
+            }
+
+?>
             </div>
         </div>
     </div>
-
-
-
     <div class="grey-container">
         <div class="container">
             <h2 class="title">Our Team</h2>
             <ul>
                 <li>
                     <figure>
-                        <img src="../assets/images/contact1-adelin.png" class="contact-pic1" alt="user testimonial picture 1">
-                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        <img src="../assets/images/contact1-adelin.png" class="contact-pic1"
+                            alt="user testimonial picture 1">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
                             incididunt ut labore et dolore magna aliqua.</blockquote>
                         <figcaption>- Vasiliu Adelin</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="../assets/images/user2.png" class="contact-pic2" alt="user testimonial picture 2">
-                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        <img src="../assets/images/bogdan.png" class="contact-pic2" alt="user testimonial picture 2">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
                             incididunt ut labore et dolore magna aliqua.</blockquote>
                         <figcaption>- Radu Bogdan</figcaption>
                     </figure>
@@ -232,7 +113,8 @@
             </div>
             <div class="comercial-container">
                 <div class="comercial-header">
-                    <img src="https://d2td6mzj4f4e1e.cloudfront.net/wp-content/uploads/sites/9/2018/10/Fruit-Shoot-Advert-620x330.png" alt="">
+                    <img src="https://d2td6mzj4f4e1e.cloudfront.net/wp-content/uploads/sites/9/2018/10/Fruit-Shoot-Advert-620x330.png"
+                        alt="">
                 </div>
             </div>
             <div class="comercial-container">
@@ -248,8 +130,10 @@
         <form class="formContactContainer">
             <input class="inputBoxes" type="text" placeholder="Full name..." name="nume">
             <input class="inputBoxes" type="text" placeholder="E-mail..." name="e-mail">
-            <input class="inputBoxes" type="text" placeholder="Phone number..." title="Numar de telefon obligatoriu!" name="telefon">
-            <textarea class="inputTextBoxArea" placeholder="What would you like to tell us..." name="mesaj" cols="30" rows="10"></textarea>
+            <input class="inputBoxes" type="text" placeholder="Phone number..." title="Numar de telefon obligatoriu!"
+                name="telefon">
+            <textarea class="inputTextBoxArea" placeholder="What would you like to tell us..." name="mesaj" cols="30"
+                rows="10"></textarea>
             <button class="btn special blue" type="submit" name="trimite">Send</button>
         </form>
     </div>
