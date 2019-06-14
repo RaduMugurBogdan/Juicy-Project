@@ -48,7 +48,7 @@ class ShopModel
         return $this->defaultQueryModel($sql);
     }
 
-    public function getItems($cat = "", $brand = "", $sizePack = "",$order="")
+    public function getItems($cat = "", $brand = "", $sizePack = "",$order="",$start="",$end="")
     {
         $sql = "SELECT * from product_details ";
 
@@ -74,6 +74,7 @@ class ShopModel
             $sql .= " WHERE brand = '$brand'";
         }
 
+        
         if($order!=NULL)
         {
             if($order == "nameAsc" || $order == "default"){
@@ -95,6 +96,12 @@ class ShopModel
                 $sql .= "order by pack_size desc";
             }
         }
+
+        if($start != NULL && $end != NULL)
+        {
+            $sql .= " limit ".$start.",".$end;
+        }
+
         
         $resultItems = array();
         $sql = $this->connection->prepare($sql);
@@ -121,5 +128,12 @@ class ShopModel
         $aux = "'%".$itemName."%'";
         $sql= "SELECT * FROM product_details WHERE product_name LIKE $aux";
         return $this->defaultQueryModel($sql);
+    }
+
+    public function countAllItems(){
+        $sql = "SELECT COUNT(*) from product_details";
+        $sql = $this->connection->prepare($sql);
+        $sql->execute();
+        return $sql->fetchColumn(0);
     }
 }

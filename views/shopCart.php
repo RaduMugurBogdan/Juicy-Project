@@ -66,7 +66,7 @@ if(isset($_GET['clear'])){
                 <span class="cart_style" id="hide2">Discount: <?php echo $discount ?></span>
                 <span class="cart_style" id="hide3">Pack size: <?php echo $packSize ?></span>
                 <span class="cart_style">Quantity: <?php echo $vals[$key] ?></span>
-                <span class="cart_style">Price: <?php echo $price ?></span>
+                <span class="cart_style">Price: <?php echo $price." RON" ?></span>
                 <a href="?removeFromCart=<?php echo $item['id_product']; ?>">
                     <button class="btn special red far fa-trash-alt">  </button>
                 </a>

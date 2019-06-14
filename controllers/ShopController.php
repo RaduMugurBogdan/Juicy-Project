@@ -4,10 +4,10 @@ class ShopController
     public function __contruct()
     { }
     
-    public function getItems($cat = "", $brand = "", $sizePack = "", $order=""){
+    public function getItems($cat = "", $brand = "", $sizePack = "", $order="",$start="",$end=""){
         require_once '../models/ShopModel.php';
         $Shop = new ShopModel();
-        $result = $Shop->getItems($cat,$brand,$sizePack,$order);
+        $result = $Shop->getItems($cat,$brand,$sizePack,$order,$start,$end);
         return $result ? $result : false;
     }
 
@@ -23,6 +23,14 @@ class ShopController
         require_once '../models/ShopModel.php';
         $Shop = new ShopModel();
         $result = $Shop->searchItemByName($itemName);
+        return $result ? $result : false;
+    }
+
+    public function countAllItems()
+    {
+        require_once '../models/ShopModel.php';
+        $Shop = new ShopModel();
+        $result = $Shop->countAllItems();
         return $result ? $result : false;
     }
 }

@@ -32,6 +32,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 if (!isset($_SESSION['copyy'])) {
     $_SESSION['copyy'] = array();
 }
+if (!isset($_SESSION['start'])) {
+    $_SESSION['start'] = "";
+}
+
+if (!isset($_SESSION['end'])) {
+    $_SESSION['end'] = "";
+}
+
+
 
 if (isset($_GET['addToCart'])) {
     if (isset($_SESSION['copyy'][$_GET['addToCart']])) {

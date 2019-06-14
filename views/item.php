@@ -88,8 +88,7 @@ if (isset($_GET['addToCart'])) {
 
         ?>
             <div class="buttons_cart">
-                <button class="btn special red">Proceed to finish</button>
-                <button class="btn special red">Back to shop</button>
-                <a href="?clear=true"><button class="btn special red">Clear cart</button></a>
+               <a href="./shopCart.php"> <button class="btn special red">Go to cart</button></a>
+               <a href="./shop.php"> <button class="btn special red">Back to shop</button></a>
             </div>
         </div>
